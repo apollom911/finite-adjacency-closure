@@ -10,10 +10,10 @@ Year: 2026
 
 ## Contents
 
-- MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.pdf
-- MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.txt
-- TE-HM-P1-01.txt   (Hash Manifest)
-- TE-HHM-P1-01.txt  (Second-Order Integrity Anchor)
+- [MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.pdf](./MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.pdf)
+- [MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.txt](./MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.txt)
+- [TE-HM-P1-01.txt](./TE-HM-P1-01.txt) — Hash Manifest
+- [TE-HHM-P1-01.txt](./TE-HHM-P1-01.txt) — Second-Order Integrity Anchor
 
 ## Verification and Governance
 
