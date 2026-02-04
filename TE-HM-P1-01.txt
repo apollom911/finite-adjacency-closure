@@ -1,0 +1,25 @@
+
+<BEGIN HASH MANIFEST>
+
+Manifest: TE-HM-P1-01
+Artifact:
+MATTER–ENTANGLEMENT LINK AND THE FINITE ADJACENCY CLOSURE OF SPACETIME
+Author: Rommel Wong
+Credential ID: TRACE-CRED-ROMMEL-01
+Date: 2026-02-04
+
+File 1:
+MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.pdf
+SHA-256:
+696563a4ae45dda3d5c40d8b715d69ee45d4a5e226fa2e1c27273a1b898728c3
+
+File 2:
+MATTER_ENTANGLEMENT_LINK_and_the_Finite_Adjacency_Closure_of_Spacetime_RWONG.txt
+SHA-256:
+743ec4f14bc1d817aa2eca9d7a80722910e23f04e3f668566e532302d1fb9b25
+
+Notes:
+File 1 is the compiled PDF artifact.
+File 2 is the canonical content-only text representation.
+
+<END HASH MANIFEST>

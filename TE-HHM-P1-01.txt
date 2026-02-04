@@ -1,0 +1,29 @@
+BEGIN HASH-OF-HASH MANIFEST
+
+Artifact:
+TE-HM-P1-01.txt
+
+Hash Algorithm:
+SHA-256
+
+Hash Value:
+4b8bf80492261d6540025508c2994f4d22773c9e91a6f86d6d2e75c0ba99128e
+
+Signer Key ID:
+STEW-ROMMEL-01
+
+Signer Public Key:
+ed25519:B9j4KNdhAviLRUigAcNkmj7rUmuRAjnY8ymGpPNw342h
+
+Scope:
+This file records the cryptographic hash of the Paper 1 hash manifest.
+It establishes a second-order integrity anchor (hash-of-hash).
+No scientific or technical content is asserted herein.
+
+Author:
+Rommel Milan Wong
+
+Date:
+2026-02-04
+
+END HASH-OF-HASH MANIFEST

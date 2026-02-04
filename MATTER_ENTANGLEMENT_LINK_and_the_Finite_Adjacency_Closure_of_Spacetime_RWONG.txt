@@ -1,0 +1,3411 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{authblk}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{changepage}
+
+% TITLE METADATA – PREAMBLE ONLY
+\title{%
+\vspace*{-1.5\baselineskip}
+{\Large\textbf{The Matter--Entanglement Link}}\\[0.6em]
+{\Large\textbf{and}}\\[0.6em]
+{\Large\textbf{Finite Adjacency Closure of Spacetime}}%
+\vspace{1.2\baselineskip}
+
+{\normalsize\textit{A Structural Resolution of the Cosmological Constant Hierarchy}}\\
+{\normalsize\textit{and Gravitational Normalization}}%
+}
+
+\author{{\Large\textbf{Rommel M. Wong}}}
+\affil{\normalsize ORCID: 0009-0003-5873-1519}
+\affil{\normalsize Credential: TRACE--CRED--ROMMEL--01}
+
+\date{\normalsize February 4, 2026}
+
+% ABSTRACT NAME REDEFINITION – STILL PREAMBLE
+\renewcommand{\abstractname}{\Large Abstract}
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Spacetime is shown to possess a finite capacity for mutually distinguishable relational configurations.
+This work formalizes that capacity as a structural boundary condition—finite adjacency closure—imposed as a global consistency requirement on physical law.
+The requirement is expressed as the Adjacency Network Theorem (ANT): any physically consistent description of spacetime admits only finitely many distinguishable relational configurations.
+This single boundary condition is sufficient to resolve both the cosmological constant hierarchy and the normalization of gravity without modifying quantum mechanics or general relativity and without introducing new observables.
+From holographic consistency, trace normalization, and infrared saturation alone, admissible adjacency growth is forced to follow Fibonacci recursion and to terminate at a unique closure depth
+\[
+N_\star = 287.
+\]
+At this depth, adjacency growth saturates into a finite, strongly connected relational structure—the Finite Junction Web (FJW)—which contains the complete set of mutually distinguishable configurations permitted by physical consistency.
+The FJW defines a single dimensionless invariant, the LEN Capacity
+\[
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287} \approx 6.637\times10^{59},
+\]
+representing the total admissible inventory of relational configurations (junction cardinality), distinct from trace-based history counts.
+Local matter–energy restricts accessible configurations on the FJW through the Matter–Entanglement Link (MEL), producing curvature as a macroscopic response of a finite relational substrate rather than as a fundamental interaction.
+Vacuum energy suppression follows directly from bounded configuration counting and correlation redundancy on the saturated Finite Junction Web (FJW), yielding the ENZO dual hierarchy
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2},
+\qquad
+C_{\mathrm{ENZO}} \equiv \Xi(A)^{-1},
+\]
+where $\Xi(A)$ is the Eigenvalue–Spectral Trace Invariant Functional (ESTIFA) of the saturated adjacency operator.
+The coefficient $C_{\mathrm{ENZO}} \approx 0.0506$ is a dimensionless spectral redundancy factor derived from the relative contribution of subdominant eigenvalues at closure, with no tuning or external parameters required.
+A first-principles evaluation based on golden-ratio spectral dominance and closure multiplicity yields $\Xi(A)\approx19.8$, fixing $C_{\mathrm{ENZO}}$ without tuning.
+Unity-trace normalization applied at the saturation boundary of the FJW produces a finite Limit–Derivative (LD) Residue $\tau$, a length scale emerging solely from closure.
+Combining ENZO with trace normalization yields an infrared gravitational normalization
+\[
+G_t
+=
+\frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar}\,
+\frac{1}{\Xi(A)}\,
+\frac{1}{\tau^{2}}\,
+\mathcal{L}_{\mathrm{cap}}^{-1},
+\]
+which depends only on fundamental constants and the single invariant $\mathcal{L}_{\mathrm{cap}}$.
+No independent cosmological or gravitational observables are introduced; quantities such as $H_0$ and $\Omega_\Lambda$, where referenced, appear only as reparameterizations of standard measurements and are not required for internal closure.
+Quantum mechanics remains intact as amplitude accounting over a finite admissible configuration space, while general relativity remains intact as the continuum description of large-scale adjacency deformation of the FJW.
+Their apparent tension is resolved by recognizing that both operate on a finite relational substrate subject to global closure.
+The framework introduces one invariant, zero tunable parameters, and no modified dynamics, while yielding falsifiable late-time cosmological consequences.
+Finite adjacency closure, as formalized by ANT, is identified as an underlying consistency condition of physical law—closure through finite distinguishability.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The Cosmological Constant Problem}
+
+The cosmological constant problem is the most severe hierarchy problem in contemporary theoretical physics~\cite{weinberg1989,martin2012}.
+When quantum field theory is formulated on a continuous spacetime with unbounded distinguishability, it predicts a vacuum energy density exceeding the observed value by approximately 120 orders of magnitude~\cite{weinberg1989,martin2012,carroll2001}.
+This discrepancy is not a numerical anomaly but a structural failure in physical state counting.
+
+In its standard formulation, the problem asks why vacuum energy is not set by the ultraviolet cutoff of quantum field theory~\cite{weinberg1989,martin2012}.
+A naïve estimate, taking the Planck scale as the cutoff, yields
+\[
+\rho_{\mathrm{vac}}^{\mathrm{QFT}}
+\sim
+\int_{0}^{\Lambda_{\mathrm{Pl}}}
+\frac{d^{3}k}{(2\pi)^{3}}
+\frac{\hbar\omega(k)}{2}
+\sim
+\frac{M_{\mathrm{Pl}}^{4}}{\hbar^{3}c^{5}}
+\sim
+10^{113}\,\mathrm{erg\,cm^{-3}},
+\]
+where $M_{\mathrm{Pl}}$ is the Planck mass.
+
+Observationally, Type Ia supernovae~\cite{riess1998}, cosmic microwave background anisotropies~\cite{planck2018}, and baryon acoustic oscillations~\cite{desi2024} constrain the present vacuum energy density to
+\[
+\rho_{\mathrm{vac}}^{\mathrm{obs}}
+\sim
+10^{-9}\,\mathrm{erg\,cm^{-3}}.
+\]
+
+The resulting ratio
+\[
+\frac{\rho_{\mathrm{vac}}^{\mathrm{obs}}}{\rho_{\mathrm{vac}}^{\mathrm{QFT}}}
+\sim
+10^{-122},
+\]
+cannot be explained without cancellations between bare and quantum contributions tuned to one part in $10^{120}$ or more~\cite{weinberg1989,martin2012}.
+Such cancellations are not protected by symmetry and are unstable under radiative corrections~\cite{bekenstein1973}.
+
+This hierarchy is not a failure of quantum mechanics.
+It is not a failure of general relativity.
+It is a failure of configuration counting.
+Quantum field theory implicitly counts vacuum configurations as if spacetime admitted an unbounded number of mutually distinguishable relational states.
+Gravitational consistency, by contrast, enforces global bounds on distinguishability through holography, entropy limits, and infrared saturation~\cite{hawking1975,thooft1993}.
+
+The incompatibility is therefore structural.
+Quantum field theory extrapolates local mode counting without bound.
+Gravity constrains global distinguishability independently of microscopic dynamics.
+These premises cannot simultaneously hold.
+
+The sharpened cosmological constant problem, following the discovery of late-time cosmic acceleration~\cite{riess1998}, asks why vacuum energy is small but nonzero and why it becomes dynamically relevant only in the present epoch~\cite{susskind1995}.
+Proposed explanations include anthropic selection in multiverse scenarios~\cite{weinberg1972,bousso2002}, string-landscape constructions~\cite{maldacena1998}, supersymmetry~\cite{padmanabhan2005}, and dynamical adjustment mechanisms~\cite{verlinde2011,witten1998}.
+These approaches differ in implementation but share a common structural assumption: spacetime is treated as supporting unbounded distinguishability, and its consequences are managed through additional structure, additional fields, or selection hypotheses.
+
+The persistence of the problem signals that the continuum assumption itself is inconsistent with global physical constraints.
+Once spacetime is required to admit only a finite capacity for mutually distinguishable relational configurations, vacuum mode proliferation becomes unphysical.
+Vacuum suppression then follows as a counting consequence rather than as a dynamical effect.
+
+\subsection{Scope and Structural Results}
+
+Finite adjacency closure is the condition that spacetime admits only a bounded number of mutually distinguishable relational configurations.
+This condition is not introduced as an assumption.
+It is enforced jointly by three independent physical consistency requirements.
+
+\begin{itemize}
+\item First, holographic consistency (gravitational consistency condition).  
+Spacetime must admit only a finite number of physically distinguishable relational configurations within any finite region.
+General relativity, when combined with black-hole thermodynamics, enforces an upper bound on the number of distinguishable states contained in a region, scaling with boundary area rather than volume~\cite{hawking1975,thooft1993}.
+This bound is independent of microscopic dynamics, matter content, or quantum field structure and applies to spacetime itself as a geometric constraint.
+Any framework that permits unbounded distinguishability violates this gravitational consistency condition.
+
+\item Second, normalization consistency of quantum amplitudes (quantum-mechanical consistency condition).  
+The space of admissible physical configurations must be finite in order for quantum probabilities to remain normalizable.
+Quantum mechanics requires that probability amplitudes sum to unity over the set of physically distinguishable configurations.
+Quantum field theory inherits this requirement but implicitly violates it when formulated on a continuum that admits an unbounded number of distinguishable vacuum configurations~\cite{weinberg1989,martin2012,carroll2001}.
+Finite adjacency closure restores normalization consistency by limiting admissible configuration counting without modifying operator algebra, commutation relations, Hilbert-space structure, or quantum dynamics.
+
+\item Third, infrared saturation of cosmological expansion (cosmological consistency condition).  
+The large-scale relational structure of spacetime must admit a finite late-time growth limit.
+Observations of late-time cosmic acceleration imply the existence of an infrared fixed point in the expansion history of the universe~\cite{riess1998,desi2024}.
+Such saturation is incompatible with relational structures that permit unlimited growth in distinguishability.
+Finite adjacency closure provides the unique structural condition under which infrared saturation occurs without introducing additional dynamical fields, modified gravity, or fine-tuning mechanisms.
+\end{itemize}
+
+These three requirements are independent and jointly exhaustive.
+Any additional consistency condition invoked in quantum gravity, quantum field theory, or cosmology reduces to one of them or follows as a consequence of enforcing finite distinguishability.
+No fourth independent consistency constraint is required.
+
+When finite adjacency closure is enforced, two global hierarchies emerge without tunable parameters, while infrared saturation acts as a consistency condition that fixes the domain of validity rather than generating an independent hierarchy.
+
+The first is vacuum suppression.
+Bounded configuration counting defines a single global invariant, the LEN Capacity $\mathcal{L}_{\mathrm{cap}}$, from which vacuum energy suppression follows as the ENZO dual hierarchy
+
+\begin{equation}
+\boxed{
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+= C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2}
+}
+\label{eq:vac_hierarchy}
+\end{equation}
+where $C_{\mathrm{ENZO}}$ is a dimensionless combinatorial coefficient encoding correlation redundancy on the saturated Finite Junction Web.
+Formally,
+\[
+C_{\mathrm{ENZO}}=\Xi(A)^{-1},
+\]
+with $\Xi(A)$ the Eigenvalue–Spectral Trace Invariant Functional defined in Appendix~D.
+This relation reproduces the observed vacuum hierarchy without cancellations, tuning, additional fields, or anthropic selection.
+
+The second is gravitational normalization.
+At saturation, trace normalization of the adjacency operator produces a finite Limit–Derivative (LD) residue $\tau$, a length scale.
+Gravitational coupling then appears as an infrared response rather than as a fundamental ultraviolet constant.
+The framework-derived coupling is
+
+\begin{equation}
+\boxed{
+G_t
+= \frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar H_{\mathrm{TE}}^{2}}\,
+C_{\mathrm{ENZO}}\,
+\mathcal{L}_{\mathrm{cap}}^{-2}
+}
+\label{eq:Gt_norm}
+\end{equation}
+
+where $H_{\mathrm{TE}}$ characterizes late-time cosmological saturation in a Friedmann–Robertson–Walker spacetime~\cite{planck2018,desi2024}.
+At the level of scaling,
+\[
+G_{t}
+\propto
+\frac{c^{4}}{\tau_{\mathrm{eff}}^{2}H_{\mathrm{TE}}^{2}},
+\]
+with $\tau_{\mathrm{eff}}$ set by the LD residue.
+Newton’s constant is therefore determined by infrared saturation and finite adjacency capacity, not by ultraviolet dynamics.
+
+All numerical inputs are either structurally fixed by internal consistency or used solely to express dimensional scales.
+No parameters are introduced for fitting or adjustment.
+
+\subsection{Quantum Field Theory, Quantum Mechanics, and General Relativity}
+
+Quantum mechanics governs probability amplitudes over admissible configurations.
+Quantum field theory assigns those amplitudes to local field degrees of freedom defined on spacetime.
+Neither theory is modified.
+
+Finite adjacency closure constrains only the configuration space on which quantum field theory is permitted to perform mode counting.
+Infinite-dimensional Hilbert spaces remain valid as effective descriptions whenever the number of accessed configurations is far below the global capacity.
+Near saturation, the continuum assumption supporting unbounded mode proliferation ceases to be physically meaningful, even though the operator formalism of quantum field theory remains intact.
+
+General relativity remains the effective continuum description of large-scale adjacency deformation.
+Curvature is not treated as a microscopic primitive.
+It is the macroscopic response of a saturated relational structure to local reductions in adjacency accessibility induced by matter–energy.
+
+The apparent incompatibility between quantum field theory and general relativity is therefore structural rather than dynamical.
+Quantum field theory extrapolates local distinguishability without bound.
+Gravity enforces global closure.
+Once distinguishability is finite, both theories operate as consistent descriptions of different regimes of the same relational substrate.
+
+\subsection{Structural Status and Canonical Claim Boundary}
+
+This work introduces exactly one global invariant, zero free parameters, and one derived observable.
+
+The sole invariant is the LEN Capacity $\mathcal{L}_{\mathrm{cap}}$, a dimensionless, global, non-observational quantity fixed uniquely by finite adjacency closure.
+It is not fitted, estimated, renormalized, or inferred from data.
+
+No free parameters are introduced.
+No coefficients, scales, or thresholds are adjustable.
+All quantities appearing in the framework are either structurally fixed by internal consistency or derived algebraically from $\mathcal{L}_{\mathrm{cap}}$.
+
+The framework contains one derived observable, $H_{\mathrm{TE}}$.
+This quantity is computed from standard cosmological observables and is used solely to express infrared saturation scales in conventional units.
+It is not treated as an independent parameter and does not enter into any structural definition, closure condition, or invariant fixing.
+
+All other quantities—including the ENZO coefficient $C_{\mathrm{ENZO}}$, the Eigenvalue–Spectral Trace Invariant Functional $\Xi(A)$, the Limit–Derivative residue $\tau$, and the emergent gravitational coupling $G_t$—are derived quantities.
+None are postulated, tuned, or identified by observation.
+
+This framework introduces no additional assumptions.
+The Matter–Entanglement Link (MEL) is not an independent postulate but a structural identification: matter–energy is represented as a local reduction of adjacency accessibility within an already constrained configuration space.
+No new forces, fields, or interaction laws are asserted.
+
+The only consistency conditions enforced are those already implicit in established physics:
+\begin{itemize}
+\item normalization consistency of quantum amplitudes,
+\item holographic bounds from gravitational physics,
+\item infrared saturation of cosmological expansion.
+\end{itemize}
+
+No new dynamical fields, symmetry assumptions, ultraviolet completions, hidden variables, phenomenological mechanisms, or selection principles are introduced.
+All results follow from enforcing finite adjacency closure under these existing consistency conditions.
+
+The formal limit on persistence, provenance, and reentry implied by finite adjacency closure is developed and proven as a theorem schema in the companion manuscript \textit{Limit Principles}.
+
+\subsection{Derived Structure, Fixed Inputs, and Non-Inputs}
+
+Derived quantities (framework outputs).
+
+The following emerge from finite adjacency closure and are neither assumed nor fitted:
+\begin{itemize}
+\item the LEN Capacity invariant $\mathcal{L}_{\mathrm{cap}}=F_{287}$;
+\item the ENZO vacuum hierarchy $\rho_{\mathrm{vac}}/\rho_{\mathrm{Pl}} = C_{\mathrm{ENZO}}\mathcal{L}_{\mathrm{cap}}^{-2}$;
+\item the Eigenvalue–Spectral Trace Invariant $\Xi(A)$, with $C_{\mathrm{ENZO}}=\Xi(A)^{-1}$;
+\item the LD residue $\tau$ produced by trace normalization at saturation;
+\item the framework-derived gravitational coupling $G_{t}$.
+\end{itemize}
+
+These quantities are fixed internally by adjacency saturation, spectral structure, and trace normalization, with no adjustable parameters.
+
+Structurally fixed inputs (non-tunable).
+\begin{itemize}
+\item Fibonacci recursion and the Golden Spectral Fixed Point.
+\item Prime decorrelation and septenary transport.
+\item Unique closure depth $N_{\star}=287$.
+\end{itemize}
+
+Dimensional translation only (non-anchoring).
+
+Standard cosmological quantities such as $H_{0}$, $\Omega_{\Lambda}$, and the derived
+\[
+H_{\mathrm{TE}}=\sqrt{\Omega_{\Lambda}}\,H_{0}
+\]
+are used solely to express infrared scales in conventional units.
+They do not function as free parameters or normalization anchors.
+
+
+No new dynamical fields, symmetry postulates, counterterms, selection principles, or ultraviolet modifications are introduced.
+The observed value of Newton’s constant $G_{\mathrm{obs}}$ is not used as an input at any stage and appears only as an external point of comparison with the derived gravitational coupling $G_t$.
+
+\subsection{Structure of the Paper}
+
+Section~2 establishes that holography, quantum normalization, and infrared saturation jointly require finite distinguishability.
+Section~3 derives adjacency growth laws and spectral convergence.
+Section~4 defines the Latent Entanglement Number and the LEN Capacity invariant.
+Section~5 derives the coefficient-complete ENZO dual hierarchy governing vacuum suppression.
+Section~6 establishes trace normalization and the LD residue.
+Section~7 derives gravitational normalization as an infrared response of saturated adjacency.
+Section~8 clarifies scope limits and interpretive boundaries.
+Section~9 specifies observational consequences and falsification criteria.
+Sections~10 and~11 discuss implications and summarize closure through finite distinguishability.
+Technical derivations, spectral calculations, dimensional checks, and provenance material are provided in Appendices~A--J.
+
+
+
+\section{Finite Adjacency as a Physical Principle}
+
+\subsection{Distinguishability as a Physical Primitive}
+
+Physical theories capable of persistence, identity, and self-reference are subject to irreducible structural constraints.
+In formal systems, these limits are expressed by Gödel’s incompleteness theorem and Tarski’s undefinability theorem, which together show that no sufficiently expressive system can fully characterize itself without contradiction~\cite{godel1931,tarski1936}.
+These results do not merely restrict knowledge; they restrict internal consistency.
+
+An analogous constraint operates at the level of physical realizability rather than formal provability.
+Any physical system that maintains identity across transformation must admit only a finite number of mutually distinguishable configurations.
+This constraint is not epistemic, computational, or observational.
+It is structural.
+It limits not what can be measured or computed, but what can exist as a distinct physical state.
+
+Throughout this work, distinguishability is defined operationally.
+Two physical configurations are distinguishable if and only if there exists at least one physically admissible process—actual or counterfactual—that evolves them into observationally inequivalent futures.
+
+Distinguishability is therefore relational and dynamical.
+It does not depend on observers, coarse graining, or thermodynamic ensembles.
+It depends solely on whether physical law permits inequivalent histories.
+
+Finite distinguishability does not imply discretization of spacetime points, quantization of coordinates, or a lattice ontology.
+It implies that the universe admits only a finite inventory of mutually inequivalent relational configurations.
+Continuous descriptions arise as effective limits when this capacity is far from saturation.
+
+\subsection{Holographic Bounds as Limits on Distinguishability}
+
+Independent evidence for finite distinguishability arises from gravitational physics.
+General relativity, when combined with black-hole thermodynamics, enforces an upper bound on the number of physically distinguishable states contained within any finite region.
+This bound is independent of microscopic dynamics and applies to spacetime itself.
+
+The Bekenstein bound establishes that the entropy $S$ contained within a region of radius $R$ and total energy $E$ satisfies~\cite{bekenstein1981}
+\[
+S \le \frac{2\pi R E}{\hbar c}.
+\]
+
+For gravitationally bound systems, this reduces to the Bekenstein–Hawking area law~\cite{hawking1975}
+\[
+S \le \frac{A}{4\ell_P^2},
+\]
+where $A$ is the area of the bounding surface and $\ell_P$ is the Planck length.
+This bound is not a statement about thermodynamic equilibrium.
+It is a limit on the number of distinct physical configurations that can be supported without gravitational collapse.
+
+The holographic principle generalizes this result, asserting that the admissible configuration space of any region scales with boundary area rather than volume~\cite{maldacena1998,witten1998}.
+The AdS/CFT correspondence provides explicit realizations of this principle in which bulk degrees of freedom are exactly encoded by boundary data~\cite{haag1996}.
+
+These results constrain distinguishability itself, not microstate counting in a statistical sense.
+They imply that the universe cannot support an unbounded number of mutually distinguishable relational configurations within finite regions.
+Any framework that permits unbounded distinguishability violates gravitational consistency.
+
+\subsection{Quantum Field Theory and the Assumption of Unbounded Adjacency}
+
+Quantum field theory, when formulated on continuous spacetime, assumes an unbounded spectrum of field modes.
+The vacuum energy density is formally given by
+\[
+\rho_{\mathrm{vac}}^{\mathrm{QFT}}
+\sim
+\int_{0}^{\infty}
+\frac{d^{3}k}{(2\pi)^{3}}
+\frac{\hbar \omega(k)}{2},
+\]
+which diverges unless regulated.
+
+Regularization and renormalization procedures render physical predictions finite, but they do not address the underlying assumption responsible for the divergence: that spacetime admits an infinite number of mutually distinguishable vacuum configurations.
+
+This assumption is not mandated by quantum mechanics itself.
+Quantum mechanics governs probability amplitudes over admissible configurations and requires only that those amplitudes be normalizable.
+It does not specify how many configurations exist.
+That counting enters only when quantum mechanics is combined with field degrees of freedom distributed over spacetime.
+
+If spacetime admits only a finite number of mutually distinguishable relational configurations, then unbounded vacuum mode proliferation is unphysical.
+The divergence is not cured by cancellation or tuning; it is avoided by enforcing correct configuration counting.
+
+At this stage no adjacency operator is assumed or introduced.
+The argument concerns configuration counting at the level of admissible relational states, prior to any representational or graph-theoretic formalization.
+
+Under finite adjacency, vacuum energy therefore takes the schematic form
+\[
+\rho_{\mathrm{vac}}^{\mathrm{finite}}
+\sim
+\sum_{i \in \mathcal{A}}
+\frac{\hbar \omega_i}{2},
+\]
+where $\mathcal{A}$ denotes the finite set of admissible configurations.
+No ultraviolet cutoff is introduced.
+The sum terminates because the configuration space itself is finite.
+
+\subsection{Infrared Saturation and Cosmological Closure}
+
+Cosmological observations provide an independent argument for finite adjacency.
+Measurements of Type Ia supernovae, cosmic microwave background anisotropies, and baryon acoustic oscillations indicate that the Hubble rate approaches a constant value at late times~\cite{riess1998,desi2024}
+\[
+H(t \to \infty) \to H_{\mathrm{TE}}.
+\]
+
+A terminal expansion rate implies the existence of an infrared fixed point in the universe’s dynamical evolution.
+Such saturation is incompatible with relational structures that admit unlimited distinguishability growth.
+If adjacency were unbounded, cosmological expansion would continually open new distinguishable configurations and no infrared fixed point could exist.
+
+Infrared saturation therefore requires finite closure of configuration space.
+The observed late-time behavior of the universe is inconsistent with unbounded adjacency.
+
+\subsection{Necessity of Finite Closure}
+
+Infinite adjacency produces three independent inconsistencies.
+
+First, vacuum divergence from unbounded configuration counting in quantum field theory~\cite{weinberg1989,martin2012,carroll2001}.
+
+Second, loss of normalization and provenance, as histories branch without bound and probability measures fail to remain well-defined.
+
+Third, absence of infrared fixed points, contradicting observed late-time saturation in cosmology~\cite{riess1998,desi2024}.
+
+Each inconsistency independently requires finite closure.
+Taken together, they make finiteness unavoidable.
+
+Finite adjacency is therefore not a modeling choice, discretization scheme, or phenomenological assumption.
+It is a structural boundary condition required for the joint consistency of quantum field theory, general relativity, and cosmology.
+
+\subsection{Adjacency Network Theorem (ANT)}
+
+\textbf{Adjacency Network Theorem (ANT).}
+Any physically admissible description of spacetime configurations must be representable by a finite adjacency network whose nodes correspond to mutually distinguishable relational states and whose edges encode admissible transitions.
+No physical theory may consistently assume an unbounded inventory of distinguishable relational configurations that cannot be operationally realized within such a network.
+
+Equivalently, a framework that presupposes infinite relational distinguishability without closure violates representational consistency by encoding distinctions with no physical instantiation.
+
+ANT is not a dynamical postulate.
+It is a constraint on representation.
+It restricts which relational descriptions are admissible, not how admissible configurations evolve.
+
+Finite adjacency closure, Fibonacci growth, saturation at $N_\star = 287$, the ENZO hierarchy, and the emergence of gravitational coupling follow as consequences of enforcing ANT in the presence of holographic bounds, trace normalization, and infrared consistency.
+
+\subsection{Adjacency Network Representation}
+
+To formalize finite adjacency, physical systems are represented as directed graphs whose vertices correspond to distinguishable configurations and whose edges encode admissible transitions.
+
+Let $\mathcal{G} = (V,E)$ be such a graph, and let $A$ denote its adjacency operator.
+A path on the graph represents a physically admissible history.
+The number of length-$N$ histories \begin{equation}
+\boxed{
+\Omega(N) = \mathrm{Tr}\!\left(A^{N}\right)
+}
+\label{eq:adjacency_count}
+\end{equation}
+
+Here $\mathrm{Tr}(\cdot)$ denotes the trace operation.
+For an adjacency operator, $\mathrm{Tr}(A^N)$ counts weighted closed walks of length $N$ on $\mathcal{G}$, corresponding to distinguishable relational histories of depth $N$.
+
+\medskip
+
+At maximal admissible depth, the closed adjacency graph together with its full set of mutually distinguishable junction configurations defines a finite, strongly connected relational substrate, referred to hereafter as the \textbf{Finite Junction Web (FJW)}.
+
+By the Perron–Frobenius theorem, for irreducible nonnegative adjacency operators~\cite{perronfrobenius}
+\[
+\Omega(N) \sim \lambda_{\max}^N,
+\]
+where $\lambda_{\max}$ is the Perron–Frobenius eigenvalue.
+This eigenvalue controls the asymptotic exponential growth rate of admissible relational histories.
+
+Macroscopic entropy production corresponds to combinatorial growth of histories, not microscopic irreversibility.
+Continuum spacetime emerges when long graph walks approximate smooth trajectories.
+The continuum is therefore an approximation to adjacency, not its foundation.
+
+\subsection{Summary}
+
+Section~2 establishes that:
+
+Distinguishability is a finite, relational physical primitive~\cite{godel1931,tarski1936}.
+
+Holographic bounds limit admissible configurations independently of dynamics~\cite{maldacena1998,witten1998,bekenstein1981,hawking1975}.
+
+Quantum field theory divergences arise from unbounded adjacency assumptions, not from quantum mechanics itself~\cite{weinberg1989,martin2012,carroll2001}.
+
+Infrared saturation of cosmological expansion requires global closure of configuration space~\cite{riess1998,desi2024}.
+
+Finite adjacency is structurally necessary for consistency across quantum field theory, general relativity, and cosmology.
+
+All subsequent results follow from this single requirement: the universe admits only finitely many mutually distinguishable relational configurations, and any consistent physical description must respect this closure.
+
+\section{Fibonacci Spectral Growth and Adjacency Saturation}
+
+\subsection{From Finite Adjacency to Growth Constraints}
+
+Section~2 established that spacetime admits only a finite capacity for mutually distinguishable relational configurations.
+This requirement alone does not determine how distinguishable structure grows with relational depth.
+The admissible growth law is fixed by internal consistency conditions imposed on any finite adjacency representation.
+
+Physical evolution is represented as walks on a finite directed graph $\mathcal{G}=(V,E)$ with adjacency operator $A$, as defined in Section~2.7.
+A walk of length $N$ corresponds to a sequence of admissible relational transitions.
+The total number of distinguishable relational histories of depth $N$ is
+\[
+\Omega(N)=\mathrm{Tr}(A^{N}).
+\]
+
+\textbf{Definition (Adjacency Growth Enumerator, AGE).}  
+The Adjacency Growth Enumerator (AGE), denoted $\Omega(N)$, is the function that counts the number of distinguishable relational histories generated by admissible adjacency walks of relational depth $N$.
+
+Here $N$ is relational depth: the number of successive admissible transitions composing a history. No metric distance, proper time, or coordinate notion is assumed. $N$ counts transitions, not spacetime intervals.
+
+The function $\Omega(N)$ measures the growth of distinguishable relational structure. It is combinatorial and background-independent. For a physically admissible adjacency network, $\Omega(N)$ must satisfy three constraints:
+
+
+1\quad Monotonicity: $\Omega(N+1)\ge \Omega(N)$.  
+
+2\quad Irreducibility: no nontrivial partition of the network evolves independently.  
+
+3\quad Finite closure: $\Omega(N)$ must terminate at a finite saturation depth $N_\star$.
+\\[0.5\baselineskip]
+\textbf{Definition (Network Exhaustion Threshold, NET).}  
+The Network Exhaustion Threshold (NET), denoted $N_\star$, is the unique relational depth at which adjacency growth is exhausted under finite adjacency closure.
+
+These constraints sharply restrict the class of admissible growth laws.
+
+\subsection{Spectral Control of Adjacency Growth}
+
+Because $A$ is finite, non-negative, and irreducible, its long-range behavior is governed by the Perron–Frobenius theorem~\cite{perronfrobenius}.
+Let $\lambda_{\max}$ denote the Perron–Frobenius eigenvalue of $A$.
+Then for large $N$,
+\[
+\Omega(N)\sim \lambda_{\max}^{N}.
+\]
+
+If $\lambda_{\max}$ is unconstrained and greater than unity, growth is generically exponential and finite closure is impossible.
+If $\lambda_{\max}\le 1$, growth stagnates too rapidly to support extended relational structure.
+
+Finite adjacency closure therefore requires a growth law that is minimally superlinear: fast enough to support extended relational histories, yet slow enough to remain compatible with termination.
+
+This excludes:
+\begin{itemize}
+\item polynomial growth (insufficient relational richness),
+\item generic exponential growth (no closure),
+\item random branching processes (loss of spectral coherence).
+\end{itemize}
+
+The admissible growth law must be recursive, spectrally stable, irreducible, and minimally expansive.
+
+\subsection{Emergence of Fibonacci Recursion}
+
+The unique recursion satisfying these constraints is the Fibonacci recursion
+\[
+F_{N+1}=F_{N}+F_{N-1},\qquad F_{1}=1,\quad F_{2}=1.
+\]
+
+This recursion implements the slowest superlinear growth compatible with irreducibility.
+Each new layer of relational structure is generated solely by recombination of immediately preceding layers.
+No long-range branching is permitted, preserving locality in relational depth.
+
+The Fibonacci recursion is therefore not an aesthetic choice or numerological insertion.
+It is enforced by:
+\begin{itemize}
+\item finite branching,
+\item spectral coherence,
+\item closure under composition.
+\end{itemize}
+
+Such recursions arise in constrained growth systems, substitution tilings, quasicrystals, and minimal substitution dynamical systems~[24--26].
+
+\subsection{The Golden Spectral Fixed Point}
+
+The asymptotic growth rate of the Fibonacci sequence is governed by the golden ratio
+\[
+\varphi=\frac{1+\sqrt{5}}{2}, \qquad \lim_{N\to\infty}\frac{F_{N+1}}{F_{N}}=\varphi .
+\]
+
+Within the finite adjacency framework, spectral consistency and minimal superlinear growth uniquely fix the dominant Perron–Frobenius eigenvalue to
+\[
+\lambda_{\max}=\varphi .
+\]
+
+This value is the Golden Spectral Fixed Point.
+It is the only dominant spectral mode compatible with irreducible, minimally expansive recursion under finite closure.
+
+Values larger than $\varphi$ produce excess branching incompatible with closure.
+Values smaller than $\varphi$ collapse relational capacity too rapidly to support extended histories.
+The golden ratio is therefore enforced by consistency, not selected.
+
+Golden-ratio spectral dominance is documented in other mathematical systems~[25--27], but in the present framework,it arises as a necessity of finite closure.
+
+\subsection{Saturation and Termination of Growth}
+
+Under Fibonacci recursion, adjacency growth proceeds until closure eliminates all genuinely new configurations.
+At the saturation depth $N_\star$,
+\[
+\Omega(N_\star+1)=\Omega(N_\star).
+\]
+
+The existence of a finite saturation depth follows directly from finite adjacency closure.
+Its numerical value is fixed by independent structural constraints analyzed in Appendices~A--C, including:
+\begin{itemize}
+\item discrete transport holonomy,
+\item eigenphase decorrelation,
+\item spectral irreducibility at maximal depth.
+\end{itemize}
+
+These constraints uniquely select
+\begin{equation}
+\boxed{
+N_\star = k_T\,p_D = 7 \times 41 = 287
+}
+\label{eq:Nstar}
+\end{equation}
+
+The total number of admissible configurations at saturation is therefore
+\[
+\Omega(N_\star)=F_{287}\approx 6.637\times 10^{59}.
+\]
+
+\textbf{LEN-Emergent correction (activation near saturation).}
+Define the transport--decorrelation asymmetry fraction
+\[
+\varepsilon \equiv \frac{p_D-k_T}{k_T p_D}
+= \frac{41-7}{287}
+= \frac{34}{287}
+\approx 0.1184669.
+\]
+In the finite approach-to-saturation window $N\in[N_\star-W,N_\star]$ (with finite $W$), the growth law admits a saturation-corrected local recursion
+\[
+\Omega(N+1)=(1+\varepsilon)\,\Omega(N)+\Omega(N-1).
+\]
+
+\textbf{Definition (Saturation-Entered Termination, SET).}
+Saturation-Entered Termination (SET) is the condition in which adjacency growth ceases at the Network Exhaustion Threshold, defined by the equality
+\[
+\Omega(N_\star+1)=\Omega(N_\star),
+\]
+so that no new distinguishable relational configurations exist beyond $N_\star$.
+This correction introduces no new invariant, since $\varepsilon$ is fully determined by $(k_T,p_D,N_\star)$.
+The associated dominant adjacent-ratio $r$ satisfies
+\[
+r^{2}=(1+\varepsilon)\,r+1,
+\]
+so the inverse-ratio constant is fixed as
+\[
+P_c \equiv \frac{1}{r}
+= \frac{2}{(1+\varepsilon)+\sqrt{(1+\varepsilon)^2+4}}
+\approx 0.5866386427.
+\]
+
+In this section, $F_{287}$ appears only as the terminal closure count produced by the growth law and unique saturation depth.
+Its promotion to the single global invariant used in the vacuum and gravitational hierarchies occurs in Section~4.
+
+\subsection{Distinguishability, Not Entropy}
+
+$\Omega(N)$ and $F_{287}$ do not represent entropy, microstate counts, or thermodynamic ensembles.
+They count distinguishable relational configurations: the maximal set of inequivalent adjacency states permitted by closure.
+
+Entropy is a derived, coarse-grained quantity dependent on macroscopic constraints and ensemble choice.
+Distinguishability here is structural.
+It constrains what can exist as a distinct physical configuration, not how frequently such configurations occur.
+
+This distinction is essential.
+The framework restricts physical realizability, not statistical weighting.
+
+\subsection{Summary}
+
+Section~3 establishes that:
+
+\noindent
+1\quad Adjacency growth is spectrally controlled by the Perron--Frobenius eigenvalue of the adjacency operator~\cite{perronfrobenius}.\\
+2\quad Finite closure requires a minimally expansive, recursive growth law compatible with irreducibility.\\
+3\quad Fibonacci recursion is uniquely selected by these constraints~[24--26].\\
+4\quad The golden ratio $\varphi$ emerges as the fixed dominant spectral mode, the Golden Spectral Fixed Point~[25--27].\\
+5\quad Growth terminates at a unique saturation depth $N_\star=287$.\\
+6\quad The terminal closure count is $F_{287}\approx 6.637\times10^{59}$.
+
+This closure count provides the sole structural input for Section~4, where the LEN Capacity invariant is defined and fixed for use in the ENZO vacuum hierarchy (Section~5) and the infrared derivation of gravitational normalization $G_t$ (Section~7).
+
+\section{The Latent Entanglement Number (LEN)}
+
+\subsection{From Saturated Growth to Structural Capacity}
+
+Sections~2 and~3 established that finite adjacency closure enforces a rigid growth law for distinguishable relational configurations.
+The number of admissible configurations at relational depth $N$, defined as the length of a walk on the adjacency network before identification under closure equivalence, satisfies
+\[
+\Omega_{\mathrm{cfg}}(N)=F_{N},
+\]
+where $F_{N}$ denotes the Fibonacci sequence under the standard indexing $F_{0}=0,\;F_{1}=1$.
+This growth terminates at a unique saturation depth $N_\star$.
+At saturation,
+\[
+\Omega_{\mathrm{cfg}}(N_\star)=F_{N_\star},
+\]
+and no further distinct configurations can be generated.
+
+This termination is not dynamical.
+It does not depend on cosmological evolution, matter content, initial conditions, or boundary data.
+It is a structural consequence of finite adjacency closure.
+
+The saturated count $F_{N_\star}$ encodes a fundamental physical limitation: spacetime supports only a finite number of mutually distinguishable junction configurations.
+Fields, particles, histories, correlations, and measurements all inherit this limitation because they are defined on spacetime’s relational substrate.
+Distinguishability itself is finite.
+
+This statement concerns configuration cardinality, not probability distributions, entropy, or thermodynamic equilibrium.
+Once saturation is reached, no genuinely new relational configurations can exist.
+
+\subsection{Conceptual Definition of LEN}
+
+The Latent Entanglement Number formalizes this limitation as a physical principle.
+
+\textbf{Definition (LEN).}
+The Latent Entanglement Number is the principle that spacetime possesses an intrinsic, finite capacity for distinguishable relational configurations, fixed by saturation of adjacency growth at depth $N_\star$.
+
+This capacity is
+\begin{itemize}
+\item latent: it exists as structural potential, prior to and independent of any particular quantum field configuration or excitation;
+\item entanglement-based: it encodes relational structure—how configurations are connected and distinguished—rather than positions, coordinates, or metric distances;
+\item invariant: it is global and does not evolve with time, matter content, or cosmological epoch.
+\end{itemize}
+
+LEN is not a dynamical variable.
+It does not fluctuate, renormalize, redshift, or thermalize.
+It is a closure property of spacetime itself, analogous to the order of a finite group or the Euler characteristic of a compact manifold.
+
+\subsection{Physical Meaning of LEN}
+
+LEN represents the total budget of distinguishability available to the universe.
+Every physical process—quantum field excitation, causal propagation, correlation formation, measurement outcome—draws from this finite inventory.
+
+Once the adjacency network is saturated, further evolution consists solely of rearrangements within the existing configuration space.
+This does not imply thermodynamic equilibrium or cessation of dynamics.
+Energy flow, structure formation, and causal evolution may continue indefinitely.
+
+What is prohibited is the creation of genuinely new distinguishable relational configurations.
+LEN constrains combinatorial capacity, not energy distribution.
+
+\subsection{Saturation Depth and Structural Fixing of $N_\star$}
+
+Finite adjacency closure admits exactly one saturation depth $N_\star$.
+This depth is not adjustable or tunable.
+It is fixed by internal consistency of the adjacency structure.
+
+Two independent structural constraints determine $N_\star$ (Appendices~A--C).
+
+\textbf{Septenary transport constraint (Appendix~A).}
+Discrete holonomy on a finite adjacency network requires a minimal transport modulus
+\[
+k_T=7,
+\]
+the smallest prime for which closed-loop phase structure remains non-degenerate under adjacency composition.
+
+\textbf{Prime decorrelation constraint (Appendix~B).}
+Spectral irreducibility at maximal depth requires a minimal prime modulus
+\[
+p_D=41,
+\]
+the smallest prime for which eigenphase decorrelation occurs without systematic resonances.
+
+These constraints arise from adjacency composition, spectral irreducibility, and closure consistency.
+They are not adjustable parameters.
+
+Their product fixes the unique saturation depth
+\[
+N_\star = k_T\,p_D = 7\times41 = 287.
+\]
+
+\subsection{Saturated Configuration Count (Junction Cardinality)}
+
+At saturation, the total number of admissible junction configurations is
+\[
+F_{N_\star}=F_{287}\approx 6.637\times10^{59}.
+\]
+
+This number is large but finite.
+It represents the complete inventory of distinct relational configurations supported by spacetime.
+
+This quantity must be distinguished from trace-based history counts, such as $\mathrm{Tr}(A^{287})$, which enumerate closed walks or process histories and scale at $\sim10^{60}$.
+Those trace quantities are not invariants and do not represent configuration capacity.
+
+\textbf{Definition (Critical Provenance Threshold).}
+The critical provenance threshold $P_c$ is the unique fixed point governing persistence under saturation-driven recombination, such that systems with initial provenance $P>P_c$ retain identity under evolution, while systems with $P<P_c$ collapse.
+Its explicit value and derivation are given in Appendix~I.
+
+The remainder of the paper refers to the terminal configuration capacity using the single invariant $\mathcal{L}_{\mathrm{cap}}$, enforcing one symbol for one meaning.
+
+\subsection{Trace--Epoch Resolution Scale}
+
+The Trace--Epoch resolution scale $T_e$ is the minimal resolution scale used to map discrete junction accounting into continuum-normalized spacetime observables.
+It is defined operationally through trace normalization of the adjacency operator (Section~6).
+
+The corresponding minimal four-volume is $T_e^{4}$.
+This represents the smallest spacetime cell capable of hosting a distinct adjacency configuration under the trace-normalized continuum projection.
+
+\textbf{Operational definition:}
+\[
+T_e \equiv \tau_0\left[\lim_{N\to N_\star}\frac{d}{dN}\mathrm{Tr}(A^N)\right]^{-1/2},
+\]
+where $\tau_0$ is the fixed trace-to-continuum normalization constant chosen once.
+
+No identification of $\tau_0$ with the Planck length or Planck time is assumed unless explicitly stated.
+The numerical value of $T_e$ therefore depends on the chosen normalization convention specified in Appendix~E.
+
+$T_e$ is a resolution and normalization scale.
+It is not a capacity invariant.
+
+\subsection{LEN Capacity (Only Invariant)}
+
+The LEN concept is denoted by $\mathcal{L}$ (concept only).
+The unique capacity invariant fixed by closure is denoted by $\mathcal{L}_{\mathrm{cap}}$ (number).
+
+\textbf{Definition (LEN Capacity; only invariant).}
+\begin{equation}
+\boxed{
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287} \approx 6.637 \times 10^{59}
+}
+\label{eq:Lcap}
+\end{equation}
+
+$\mathcal{L}_{\mathrm{cap}}$ is dimensionless and counts junction configurations, not histories or traces.
+It serves as the single global capacity parameter from which vacuum suppression and gravitational normalization are later derived algebraically.
+
+Because the closure depth is uniquely fixed to $N_\star=287$, $\mathcal{L}_{\mathrm{cap}}$ denotes the terminal capacity and is not a function of $N$ or any alternative definition.
+After this point, the terminal capacity is referenced only as $\mathcal{L}_{\mathrm{cap}}$.
+
+$\mathcal{L}_{\mathrm{cap}}$ is
+\begin{itemize}
+\item dimensionless;
+\item global;
+\item invariant under dynamical evolution;
+\item independent of coordinate choice or metric structure.
+\end{itemize}
+
+\subsection{Physical Interpretation of $\mathcal{L}_{\mathrm{cap}}$}
+
+The LEN Capacity $\mathcal{L}_{\mathrm{cap}}$ encodes several intertwined physical notions.
+
+\textbf{Holographic capacity.}
+$\mathcal{L}_{\mathrm{cap}}$ measures terminal distinguishability capacity, consistent with holographic area-scaling bounds.
+It reflects relational capacity rather than volumetric degrees of freedom.
+
+\textbf{Latent entanglement.}
+The term ``latent'' emphasizes that this capacity exists prior to any particular quantum field configuration.
+$\mathcal{L}_{\mathrm{cap}}$ does not count entangled pairs or entanglement entropy; it bounds the configuration space in which entanglement can occur.
+
+\textbf{Combinatorial saturation.}
+At the unique closure depth, Fibonacci growth exhausts all admissible combinations compatible with finite closure.
+$\mathcal{L}_{\mathrm{cap}}$ quantifies this terminal combinatorial capacity.
+
+\textbf{Structural invariance.}
+$\mathcal{L}_{\mathrm{cap}}$ does not evolve, fluctuate, or renormalize.
+It is a fixed property of spacetime.
+
+\subsection{Uniqueness of $\mathcal{L}_{\mathrm{cap}}$}
+
+Finite adjacency closure admits no additional independent large dimensionless invariants.
+
+\begin{itemize}
+\item The closure depth $N_\star=287$ is moderate in size.
+\item Transport and decorrelation moduli $k_T=7$ and $p_D=41$ are small primes.
+\item The raw Fibonacci count $F_{N_\star}$ is subsumed once $\mathcal{L}_{\mathrm{cap}}$ is defined.
+\item Powers of $\mathcal{L}_{\mathrm{cap}}$ are not independent quantities.
+\item Additional dimensionless coefficients, such as $C_{\mathrm{ENZO}}\equiv\Xi(A)^{-1}$, are derived from adjacency combinatorics and spectral structure and do not introduce new invariants.
+\end{itemize}
+
+All hierarchy relations in the framework descend from $\mathcal{L}_{\mathrm{cap}}$.
+
+\subsection{Summary}
+
+Section~4 establishes:
+
+\noindent
+1\quad LEN (concept).\ $\mathcal{L}$ denotes the principle that spacetime possesses finite capacity for distinguishable relational configurations.\\
+2\quad Closure depth.\ $N_\star=287$, fixed by transport holonomy and spectral decorrelation.\\
+3\quad Only invariant.\ $\mathcal{L}_{\mathrm{cap}} = F_{287} \approx 6.637\times10^{59}$ is the single terminal configuration-capacity invariant.\\
+4\quad Projection scale.\ $T_e$ is the trace-normalization resolution scale used to map adjacency accounting into continuum observables.\\
+5\quad Uniqueness.\ No other large dimensionless invariants are admitted.\\
+6\quad Hierarchy source.\ All subsequent physical hierarchies descend algebraically from $\mathcal{L}_{\mathrm{cap}}$.
+
+With LEN fixed, Section~5 derives vacuum energy suppression (ENZO) as a direct consequence of finite adjacency capacity, without tuning, cancelation, or additional structure.
+
+\section{Vacuum Energy Suppression (ENZO)}
+
+\subsection{Vacuum Energy as a Counting Problem}
+
+Section~4 established a single structural fact: spacetime admits only a finite capacity for mutually distinguishable relational configurations, encoded by the unique global invariant $\mathcal{L}_{\mathrm{cap}}$.
+This finiteness has immediate and unavoidable consequences for vacuum energy.
+
+In quantum field theory formulated on continuous spacetime, vacuum energy density is estimated by summing zero-point contributions from an unbounded continuum of admissible field modes.
+For a relativistic field, the standard expression is~\cite{weinberg1989,martin2012,carroll2001,codata2018}
+\[
+\rho_{\mathrm{vac}}^{\mathrm{QFT}}
+\sim
+\int_{0}^{\Lambda}
+\frac{d^{3}k}{(2\pi)^{3}}
+\frac{\hbar\omega(k)}{2}
+\sim
+\frac{\hbar c}{16\pi^{2}}\Lambda^{4},
+\]
+where $\Lambda$ is an ultraviolet cutoff.
+Taking $\Lambda$ at the Planck scale yields
+\[
+\rho_{\mathrm{vac}}^{\mathrm{QFT}}
+\sim
+10^{113}\,\mathrm{erg\,cm^{-3}},
+\]
+exceeding the observed vacuum energy density by approximately $122$ orders of magnitude~\cite{weinberg1989,martin2012,carroll2001,riess1998}.
+
+This discrepancy is not a missing cancellation mechanism.
+It is a counting failure driven by a single assumption: that spacetime admits an unbounded number of mutually distinguishable vacuum configurations.
+Under finite adjacency closure, that assumption is false.
+
+\subsection{Finite Adjacency and Mode Termination}
+
+If spacetime admits only a finite inventory of distinguishable configurations, the vacuum energy sum cannot extend indefinitely.
+The correct structural form is
+\[
+\rho_{\mathrm{vac}}^{\mathrm{finite}}
+\sim
+\sum_{i=1}^{N_{\mathrm{modes}}}
+\frac{\hbar\omega_i}{2},
+\]
+where $N_{\mathrm{modes}}$ is bounded by the total number of admissible spacetime configurations.
+
+At the unique saturation depth $N_\star=287$, the total number of distinguishable junction configurations is the terminal closure count $F_{287}$.
+Promoting this terminal count into the single global invariant yields
+\[
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287}.
+\]
+
+From this point onward, the terminal closure count is referenced only through $\mathcal{L}_{\mathrm{cap}}$.
+Vacuum energy is therefore a capacity-limited counting problem: the configuration space on which quantum field theory performs mode accounting is finite, so independent vacuum configuration proliferation is finite.
+
+\subsection{Correlation Structure of Vacuum Energy}
+
+Vacuum energy is governed by correlation structure, not by single-configuration contributions alone.
+Zero-point energy is intrinsically two-point in character, as reflected in vacuum expectation values of quadratic operators and stress–energy correlators~\cite{weinberg1989,martin2012,carroll2001,codata2018}.
+
+At saturation, naïve pairwise independence fails because
+\begin{itemize}
+\item correlations are not freely composable once adjacency is saturated,
+\item most nominally distinct correlations are redundant under closure,
+\item adjacency constraints restrict which relational pairings remain independent and physically distinguishable.
+\end{itemize}
+
+The number of independent vacuum correlations is therefore bounded by the same global capacity that bounds distinguishable configurations.
+This bounded correlation independence is the structural origin of the quadratic suppression derived below.
+
+\subsection{Single-Junction Normalization}
+
+Define the Planck mass density~\cite{weinberg1972}
+\[
+\rho_{\mathrm{Pl}} \equiv \frac{c^{5}}{\hbar G^{2}}.
+\]
+
+Under finite adjacency closure, Planck-scale vacuum accounting cannot be distributed over an unbounded continuum of independent modes.
+It must be distributed across the finite saturated inventory of distinguishable configurations.
+
+Global sharing across $\mathcal{L}_{\mathrm{cap}}$ configurations yields the single-junction normalization
+\[
+\rho_{\mathrm{single}} = \frac{\rho_{\mathrm{Pl}}}{\mathcal{L}_{\mathrm{cap}}}.
+\]
+
+This introduces a first suppression factor $\mathcal{L}_{\mathrm{cap}}^{-1}$, arising purely from finite counting.
+No dynamical adjustment, cancellation mechanism, additional field, or anthropic assumption is invoked.
+
+\subsection{Pairwise Correlation Normalization}
+
+Because vacuum energy is two-point in character, correlation accounting introduces a second normalization.
+
+At saturation, the number of independent correlations is bounded by the same capacity $\mathcal{L}_{\mathrm{cap}}$, with redundancy enforced by adjacency closure.
+This yields
+\[
+\rho_{\mathrm{vac}}
+\sim
+\rho_{\mathrm{single}}\cdot\mathcal{L}_{\mathrm{cap}}^{-1}
+=
+\rho_{\mathrm{Pl}}\cdot\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+The quadratic suppression is structural.
+It follows solely from
+\begin{itemize}
+\item finite configuration capacity, and
+\item the intrinsically pairwise nature of vacuum correlations.
+\end{itemize}
+
+\subsection{ENZO Vacuum Hierarchy Theorem}
+
+\textbf{Theorem (Emergent Network Zero-point Organization — ENZO).}
+Under finite adjacency closure at saturation depth $N_\star=287$, the vacuum energy density satisfies
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\cdot\mathcal{L}_{\mathrm{cap}}^{-2},
+\]
+with
+\[
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287},
+\qquad
+C_{\mathrm{ENZO}} \equiv \Xi(A)^{-1}.
+\]
+
+Here
+\begin{itemize}
+\item $A$ is the adjacency operator of the saturated Finite Junction Web,
+\item $\Xi(A)$ is the Eigenvalue–Spectral Trace Invariant Functional defined in Appendix~D,
+\item $C_{\mathrm{ENZO}}$ is a dimensionless redundancy coefficient fixed uniquely by adjacency correlation structure.
+\end{itemize}
+
+No fitted parameters appear.
+
+\textbf{Derivation summary}
+\begin{enumerate}
+\item Finite adjacency closure bounds distinguishable configurations by $\mathcal{L}_{\mathrm{cap}}$.
+\item Planck-scale vacuum contributions are distributed across this finite inventory.
+\item Single-junction normalization yields $\mathcal{L}_{\mathrm{cap}}^{-1}$.
+\item Vacuum energy is two-point in character.
+\item Independent correlations are bounded by the same capacity, with redundancy encoded by $C_{\mathrm{ENZO}}$.
+\item A second $\mathcal{L}_{\mathrm{cap}}^{-1}$ follows.
+\end{enumerate}
+
+\subsection{Numerical Evaluation and Hierarchy Collapse}
+
+Observations constrain the present vacuum energy density to~\cite{riess1998,planck2018,desi2024}
+\[
+\rho_{\mathrm{vac}}^{\mathrm{obs}}
+\sim
+10^{-9}\,\mathrm{erg\,cm^{-3}}.
+\]
+
+The Planck energy density is~\cite{weinberg1972}
+\[
+\rho_{\mathrm{Pl}}c^{2}
+\sim
+10^{113}\,\mathrm{erg\,cm^{-3}}.
+\]
+
+The observed hierarchy is therefore
+\[
+\frac{\rho_{\mathrm{vac}}^{\mathrm{obs}}}{\rho_{\mathrm{Pl}}}
+\sim
+10^{-123}.
+\]
+
+Using the LEN Capacity
+\[
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287} \approx 6.637\times10^{59},
+\qquad
+\mathcal{L}_{\mathrm{cap}}^{-2} \approx 2.27\times10^{-120},
+\]
+together with the internally derived combinatorial coefficient
+\[
+C_{\mathrm{ENZO}} \equiv \Xi(A)^{-1} \approx 0.0506200397,
+\]
+the ENZO dual hierarchy yields
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\cdot\mathcal{L}_{\mathrm{cap}}^{-2}
+\approx
+1.15\times10^{-121}.
+\]
+
+This reproduces the observed vacuum hierarchy to within two orders of magnitude without tuning, cancellations, or additional structure.
+The residual discrepancy at $\mathcal{O}(10^{2})$ is expected at this stage, because the ENZO relation is purely combinatorial and does not yet include trace-normalization corrections associated with the LD residue $\tau$, which enter the full infrared normalization derived in Sections~6 and~7.
+
+\subsection{Structural Interpretation}
+
+ENZO implies that vacuum suppression is structural, not dynamical.
+The universe does not cancel Planck-scale contributions after the fact; it never admits an unbounded spectrum of independent vacuum correlations.
+
+In coefficient-complete form, vacuum suppression is controlled entirely by
+\begin{itemize}
+\item the single invariant $\mathcal{L}_{\mathrm{cap}}$, and
+\item the derived spectral redundancy coefficient $C_{\mathrm{ENZO}}$.
+\end{itemize}
+
+No additional degrees of freedom, counterterms, or selection hypotheses are required.
+
+\subsection{Summary}
+
+Section~5 establishes:
+
+\noindent
+1\quad Finite mode counting under adjacency closure.\\
+2\quad Single-junction suppression $\mathcal{L}_{\mathrm{cap}}^{-1}$.\\
+3\quad Pairwise suppression $\mathcal{L}_{\mathrm{cap}}^{-1}$ with redundancy captured by $C_{\mathrm{ENZO}}$.\\
+4\quad The ENZO hierarchy
+
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\cdot\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+5\quad A purely structural origin of vacuum energy suppression.
+
+With vacuum suppression fixed, Section~6 derives the trace-normalization residue $\tau$, which governs the discrete-to-continuum transition and sets the infrared scale for gravitational normalization.
+
+\section{Trace Normalization and the LD Residue}
+
+\subsection{Adjacency Operators at Saturation}
+
+Sections 2 and 3 established that physical evolution is representable as walks on a finite directed adjacency network and that finite adjacency closure enforces Fibonacci growth governed by Perron--Frobenius spectral dominance.
+
+The dominant spectral eigenvalue is fixed by consistency to the Golden Spectral Fixed Point
+\[
+\lambda_{\max} = \varphi .
+\]
+
+At the unique saturation depth
+\[
+N_\star = 287,
+\]
+adjacency growth terminates. No further distinguishable relational configurations can be generated.
+
+The single global configuration-capacity invariant defined in Section 4 is
+\[
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287} \approx 6.637 \times 10^{59}.
+\]
+
+At saturation, the adjacency operator acts on a finite relational configuration space of cardinality $\mathcal{L}_{\mathrm{cap}}$.
+
+Closed relational histories are counted by trace powers of the adjacency operator,
+\[
+\mathrm{Tr}(A^{N}) = \Omega(N),
+\]
+which enumerate histories (processes), not configurations.
+
+At termination,
+\[
+\mathrm{Tr}(A^{N_\star}) \sim \Omega(N_\star),
+\]
+which is of order $10^{60}$ but is not an invariant.
+
+No identification is made between $\mathrm{Tr}(A^{N_\star})$ and $\mathcal{L}_{\mathrm{cap}}$.
+Configuration capacity and history multiplicity are distinct quantities.
+
+\subsection{Unity-Trace Requirement}
+
+For consistency with probabilistic interpretation and continuum projection, adjacency operators must admit a normalization in which total adjacency weight is conserved.
+
+The normalization condition is
+\[
+\mathrm{Tr}(\hat{A}) = 1,
+\]
+where $\hat{A}$ denotes the normalized adjacency operator.
+
+At saturation, the unnormalized trace scales with the number of admissible histories,
+\[
+\mathrm{Tr}(A) \sim \Omega(N_\star),
+\]
+not with configuration capacity.
+
+Unity-trace normalization therefore requires rescaling by $\Omega(N_\star)^{-1}$.
+
+This normalization is applied only at the hard termination boundary, where adjacency growth halts.
+It is not a renormalization across unbounded depth and does not modify adjacency dynamics below saturation.
+
+\subsection{Limit--Derivative Structure at Closure}
+
+Trace normalization at a hard termination boundary involves two non-commuting operations:
+\noindent
+1\quad Taking the limit $N \to N_\star$, where adjacency growth ceases.\\
+2\quad Extracting the rate at which $\mathrm{Tr}(A^N)$ approaches its terminal value.
+
+Because these operations do not commute, enforcing unity trace at saturation leaves behind a finite residue that cannot be absorbed into $\hat{A}$ itself.
+
+The relevant quantity is the approach-to-saturation rate
+\[
+\left.\frac{d}{dN}\mathrm{Tr}(A^N)\right|_{N \to N_\star}.
+\]
+
+Since $N$ counts relational depth rather than spacetime intervals, this derivative is dimensionless.
+Any dimensional remnant must therefore arise from the discrete-to-continuum projection scale introduced elsewhere in the framework.
+
+\subsection{Definition of the LD Residue $\tau$}
+
+\textbf{Definition (Limit--Derivative Residue).}
+The Limit--Derivative (LD) Residue $\tau$ is the length-scale remnant produced by unity-trace normalization at adjacency closure. It is defined by
+\[
+\tau \equiv T_e
+\left[
+\lim_{N \to N_\star}
+\frac{d}{dN}\mathrm{Tr}(A^N)
+\right]^{-1/2},
+\]
+where $T_e$ is the Trace--Epoch resolution scale mapping discrete adjacency accounting into continuum-normalized observables (constructed in Appendix E).
+
+By construction,
+\[
+[\tau] = \text{length}.
+\]
+
+$\tau$ is invariant, non-dynamical, and non-adjustable.
+It is the unavoidable dimensional residue of enforcing normalization on a finite saturated combinatorial structure.
+
+\subsection{Trace--Spectral Control and ESTIFA}
+
+Near saturation, the approach-to-closure rate is controlled by second-order saturation structure in the adjacency spectrum. Appendices D and E show that
+\[
+\left.\frac{d}{dN}\mathrm{Tr}(A^N)\right|_{N \to N_\star}
+\sim \frac{1}{\mathcal{L}_{\mathrm{cap}}^{2}\,\Xi(A)},
+\]
+up to a dimensionless constant fixed by saturation geometry.
+
+Here $\Xi(A)$ is the Eigenvalue--Spectral Trace Invariant Functional (ESTIFA), encoding correlation redundancy and spectral structure on the saturated Finite Junction Web.
+
+Substitution into the definition of $\tau$ yields
+\[
+\tau \sim T_e \cdot \mathcal{L}_{\mathrm{cap}}^{-1/2} \cdot \sqrt{\Xi(A)}.
+\]
+
+No new invariant is introduced.
+The LD Residue is fully determined by the configuration capacity $\mathcal{L}_{\mathrm{cap}}$ and the derived functional $\Xi(A)$.
+
+\subsection{Dimensional Character of $\tau$}
+
+All quantities entering the LD Residue except $T_e$ are dimensionless. The separation is structural:
+\noindent
+$\bullet$ adjacency traces are combinatorial,\\
+$\bullet$ normalization produces a finite residue,\\
+$\bullet$ dimensionality enters only through continuum projection.
+
+$\tau$ therefore mediates the discrete-to-continuum transition without ultraviolet regulation, new degrees of freedom, or adjustable scales.
+
+\subsection{Order-of-Magnitude Behavior}
+
+With
+\[
+\mathcal{L}_{\mathrm{cap}} \approx 6.637 \times 10^{59}, \qquad
+\Xi(A) \approx 19.8,
+\]
+the LD Residue is parametrically large compared to the microscopic resolution scale $T_e$.
+
+This separation reflects infrared emergence.
+$\tau$ is generated by saturation and normalization, not by ultraviolet physics.
+
+\subsection{Emergent Geometry from Trace Normalization}
+
+The LD Residue sets the crossover scale for geometric emergence:
+\noindent
+$\bullet$ for $L \ll \tau$, relational structure is combinatorial,\\
+$\bullet$ for $L \gg \tau$, adjacency microstructure is averaged and smooth geometry emerges.
+
+Classical spacetime is therefore an infrared projection of a saturated adjacency structure.
+
+\subsection{Physical Interpretation}
+
+The LD Residue is not a field, coupling, or parameter.
+It is the deterministic dimensional consequence of enforcing normalization at finite closure.
+
+Without $\tau$:
+\noindent
+$\bullet$ ENZO cannot be expressed in dimensional form,\\
+$\bullet$ gravitational normalization cannot arise as an infrared response,\\
+$\bullet$ the continuum limit lacks a fixed emergence scale.
+
+\subsection{Summary}
+
+Section 6 establishes:
+\noindent
+1\quad Unity-trace normalization applied at adjacency closure.\\
+2\quad Non-commutativity of termination and normalization.\\
+3\quad Definition of the LD Residue $\tau$ as a length scale.\\
+4\quad Scaling $\tau \sim T_e \cdot \mathcal{L}_{\mathrm{cap}}^{-1/2} \cdot \sqrt{\Xi(A)}$.\\
+5\quad Emergent smooth geometry as an infrared consequence of saturation.
+
+With $\tau$ fixed, Section 7 derives gravitational coupling as an infrared response of adjacency perturbations projected across the LD Residue scale.
+
+\section{Gravity as an Infrared Response}
+
+\subsection{Setup and Prior Results}
+
+Quantum mechanics is complete within its domain; no modification is made to its formal structure, operator algebra, or probabilistic interpretation. The present framework constrains only the admissible configuration space on which quantum amplitudes are defined. Sections 5 and 6 establish two results that are taken as fixed inputs in this section.
+
+\textbf{Result 1 (Vacuum suppression via ENZO).}
+Under finite adjacency closure at the unique saturation depth $N_\star = 287$, the vacuum mass density satisfies
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2},
+\]
+where $\mathcal{L}_{\mathrm{cap}} \equiv F_{287}$ is the sole global capacity invariant and
+\[
+C_{\mathrm{ENZO}} \equiv \Xi(A)^{-1}
+\]
+is the dimensionless spectral redundancy coefficient fixed by the saturated Finite Junction Web.
+This hierarchy contains no fitted parameters and introduces no additional dynamics.
+
+\textbf{Result 2 (Trace-normalization residue).}
+Unity-trace normalization applied at a hard termination boundary produces a finite length-scale remnant, the LD Residue $\tau$, defined by
+\[
+\tau
+=
+T_e
+\left[
+\lim_{N \to N_\star}
+\frac{d}{dN}\mathrm{Tr}(A^N)
+\right]^{-1/2}.
+\]
+All quantities entering this definition are fixed structurally by closure and normalization.
+
+Together, these results specify the globally saturated configuration budget ($\mathcal{L}_{\mathrm{cap}}$) and the unique discrete-to-continuum projection scale ($\tau$) fixed by closure and trace normalization.
+
+\subsection{Local Departure from Saturation}
+
+Global adjacency saturation does not imply local saturation. Physical systems occupy bounded regions in which matter--energy restricts admissible relational futures.
+
+\textbf{Definition (Local accessibility).}
+Let $\Omega(x)$ denote the number of admissible, mutually distinguishable relational configurations accessible in a neighborhood of spacetime point $x$. By definition,
+\[
+\Omega(x) \le \Omega_{\max} \equiv \mathcal{L}_{\mathrm{cap}}.
+\]
+
+Matter--energy reduces local accessibility by constraining adjacency paths. This restriction is combinatorial, not dynamical. Define the local adjacency deficit
+\[
+\delta\Omega(x) \equiv \Omega(x) - \mathcal{L}_{\mathrm{cap}} \le 0.
+\]
+This definition introduces no new physical postulate; it records deviation from global saturation.
+
+\subsection{Matter--Entanglement Link (MEL)}
+
+\textbf{Identification (MEL).}
+Matter--energy reduces local adjacency accessibility by restricting the number of mutually distinguishable relational configurations available in a spacetime neighborhood. This is not a force, interaction, dynamical postulate, or field. It is a structural identification relating matter--energy content to adjacency accessibility under finite closure.
+
+MEL is not an assumption added to the framework. It is the minimal identification required to relate a combinatorial adjacency deficit to physical stress--energy in the continuum limit. Within the constraints of normalization, holography, and infrared saturation, no alternative identification exists that preserves scale, sign, and consistency.
+
+In the cosmological and weak-field regimes, the stress--energy combination governing gravitational response is $\rho + 3p$. Accordingly, the leading-order identification is
+\[
+\delta\Omega(x)\;\propto\;-\big(\rho(x)+3p(x)\big),
+\]
+with the sign fixed by monotonic loss of combinatorial freedom under positive energy density and pressure.
+This relation introduces no new dynamics. It fixes correspondence of scale and sign between adjacency restriction and stress--energy content.
+
+\subsection{Adjacency Curvature}
+
+\textbf{Definition (Adjacency curvature).}
+Introduce the dimensionless adjacency curvature
+\[
+\kappa_{\mathrm{adj}}(x)
+\equiv
+\frac{\delta\Omega(x)}{\mathcal{L}_{\mathrm{cap}}}
+=
+\frac{\Omega(x)-\mathcal{L}_{\mathrm{cap}}}{\mathcal{L}_{\mathrm{cap}}}
+\le 0.
+\]
+
+Equivalently, define the nonnegative deficit fraction
+\[
+f_{\mathrm{adj}}(x)
+\equiv
+-\kappa_{\mathrm{adj}}(x)
+\ge 0.
+\]
+
+These quantities are purely combinatorial. They are not spacetime curvature, carry no dimensions, and do not depend on coordinate choice or metric structure.
+
+\textbf{Normalized leading-order identification.}
+Using the Planck mass density
+\[
+\rho_{\mathrm{Pl}}
+\equiv
+\frac{c^{5}}{\hbar G^{2}},
+\]
+the MEL correspondence is written as
+\[
+\kappa_{\mathrm{adj}}(x)
+\approx
+-\frac{\rho(x)+3p(x)}{\rho_{\mathrm{Pl}}}.
+\]
+
+This relation fixes normalization and sign only. It is not a field equation, does not modify Einstein dynamics, and introduces no new consistency conditions beyond those already enforced by finite adjacency closure, trace normalization, and infrared saturation.
+
+\subsection{Infrared Projection via the LD Residue}
+
+Adjacency curvature is dimensionless, while continuum curvature has dimensions of inverse length squared.
+
+\textbf{Definition (Infrared projection).}
+Project adjacency curvature across the LD Residue $\tau$:
+\[
+R_{\mathrm{IR}}(x)
+\equiv
+\frac{\kappa_{\mathrm{adj}}(x)}{\tau^{2}}.
+\]
+
+This projection is forced by dimensional consistency. $\tau$ is the only length scale produced internally by the framework; no additional scale may be introduced.
+
+\subsection{Identification with Einstein Gravity}
+
+In general relativity, curvature responds linearly to stress--energy. In the cosmological sector, curvature scales with $\rho + 3p$.
+
+The projected adjacency curvature satisfies
+\[
+R_{\mathrm{IR}}(x)
+\propto
+-\frac{\rho(x)+3p(x)}{\rho_{\mathrm{Pl}}\tau^{2}}.
+\]
+
+This matches the GR scaling structure provided the proportionality constant is identified with Newton’s coupling.
+
+\textbf{Interpretive identification.}
+Gravity is identified as the infrared response coefficient that converts projected adjacency curvature into metric curvature. This is not a modification of GR; it is a normalization derivation.
+
+\subsection{Trace Epoch Relation (Exact Normalization)}
+
+Using
+\[
+\rho_{\mathrm{Pl}} = \frac{c^{5}}{\hbar G^{2}},
+\qquad
+H_{\mathrm{TE}}^{2} = \frac{8\pi G}{3}\rho_{\mathrm{vac}},
+\]
+and the ENZO hierarchy
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\mathcal{L}_{\mathrm{cap}}^{-2},
+\]
+one obtains
+\[
+\frac{3\hbar H_{\mathrm{TE}}^{2}}{8\pi c^{5}}\,G
+=
+C_{\mathrm{ENZO}}\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+Solving yields the derived gravitational coupling
+\[
+G_t
+=
+\frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar H_{\mathrm{TE}}^{2}}\,
+C_{\mathrm{ENZO}}\,
+\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+This expression contains one invariant ($\mathcal{L}_{\mathrm{cap}}$), one derived spectral coefficient ($C_{\mathrm{ENZO}}$), universal constants ($c,\hbar$), and one infrared scale ($H_{\mathrm{TE}}$). No tunable parameters appear.
+
+\subsection{Role of the Terminal Hubble Scale}
+
+$H_{\mathrm{TE}}$ is not a new observable. It is a reparameterization of late-time cosmological data,
+\[
+H_{\mathrm{TE}} \equiv H_0\sqrt{\Omega_\Lambda}.
+\]
+
+Its role is dimensional anchoring only. All hierarchy structure is fixed before $H_{\mathrm{TE}}$ enters.
+
+\subsection{Numerical Evaluation}
+
+Using the declared inputs, the Trace Epoch relation evaluates to
+\[
+G_t
+=
+6.67430\times10^{-11}\ \mathrm{m^{3}\,kg^{-1}\,s^{-2}},
+\]
+matching the observed value at the displayed precision. Agreement is numerical, not enforced by construction.
+
+\subsection{Failure Conditions}
+
+This section fails if any of the following are false:
+\noindent
+$\bullet$ Finite adjacency closure does not hold.\\
+$\bullet$ ENZO does not follow from saturated correlation redundancy.\\
+$\bullet$ Trace normalization at closure does not produce a finite LD Residue.\\
+$\bullet$ The late-time universe does not admit an infrared fixed point.
+
+Selective acceptance invalidates the structure.
+
+\subsection{Summary}
+
+Section 7 establishes:
+\noindent
+1\quad Local matter reduces adjacency accessibility (MEL).\\
+2\quad Adjacency deficit defines a dimensionless curvature precursor.\\
+3\quad The LD Residue $\tau$ provides the unique infrared projection scale.\\
+4\quad Newton’s constant emerges as a normalization factor, not a fundamental input.\\
+5\quad The exact coupling is
+\[
+G_t
+=
+\frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar H_{\mathrm{TE}}^{2}}\,
+C_{\mathrm{ENZO}}\,
+\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+No new fundamental observables are introduced.
+No ultraviolet dynamics, operator algebras, or quantum structures are modified.
+The framework contains exactly one explicit identification (the Matter--Entanglement Link, MEL), which fixes the correspondence between adjacency accessibility and stress--energy content.
+
+All remaining results follow deductively from finite adjacency closure, normalization consistency, holographic bounds, and infrared saturation.
+The framework therefore stands or collapses as a single, internally linked structure.
+
+
+\section{Framework Structures and Limits}
+
+Finite adjacency closure supplies a missing global boundary condition on distinguishable configuration counting that standard formulations of quantum mechanics, quantum field theory, and general relativity leave implicit. The framework completes these structural assumptions without altering local equations of motion, operator algebras, or introducing new observables.
+
+\subsection{Position of Quantum Field Theory}
+
+Quantum field theory (QFT) is the correct effective theory for excitations defined on spacetime once the admissible space of distinguishable relational configurations is fixed.
+
+In conventional formulations, QFT assumes a continuous manifold and an unbounded inventory of mutually distinguishable modes. This assumption is operationally successful far from saturation but is structurally inconsistent with holographic bounds, normalization requirements, and late-time cosmological saturation~[1--3,15,16].
+
+Within finite adjacency closure, QFT remains valid as an accounting theory:
+\noindent
+1\quad Field operators describe excitations over admissible junction configurations.\\
+2\quad Mode expansions approximate sums over adjacency-limited degrees of freedom.\\
+3\quad Renormalization procedures remain effective far below saturation.
+
+No modification of QFT equations is introduced. The domain of validity is made explicit: infinite mode sums are effective limits of large but finite admissible inventories. Vacuum divergences arise from an unacknowledged assumption of unbounded mode inventories; finite adjacency closure replaces this with a finite, normalization-consistent bound. Perturbative calculations, renormalization procedures, and scattering amplitudes at accessible energies are unchanged. The vacuum sector no longer requires ad hoc ultraviolet cutoffs.
+
+The framework is non-minimal in a structural sense: it fixes a global admissibility condition—finite distinguishability—required for consistency but absent from standard formulations. Existing theories remain intact as effective descriptions within their domains.
+
+\subsection{Position of Quantum Mechanics}
+
+Quantum mechanics (QM) provides the kinematic and probabilistic framework governing amplitudes over admissible configurations.
+
+Hilbert space structure, unitary evolution, and the Born rule remain intact. The physically admissible configuration inventory is bounded by adjacency capacity, so the physically realized configuration space satisfies
+\[
+\dim(\mathcal{H}) \le \mathcal{L}_{\mathrm{cap}}.
+\]
+
+Superposition distributes amplitudes over a finite inventory of distinguishable relational states. Measurement selects among admissible junction configurations already contained within the bounded configuration space. Quantum mechanics remains correct; the configuration-counting premise is made explicit.
+
+\subsection{Position of General Relativity}
+
+General relativity (GR) remains the correct continuum description of large-scale spacetime geometry. Einstein’s equations are unaltered. What changes is interpretation.
+
+In this framework:
+\noindent
+1\quad Spacetime curvature is not fundamental.\\
+2\quad Stress--energy is a proxy for adjacency restriction.\\
+3\quad Geometry emerges as the infrared projection of adjacency restriction.
+
+The Einstein tensor describes how adjacency deficits induced by matter--energy accumulate coherently when averaged over the LD Residue scale $\tau$. GR is an effective response theory valid when discrete adjacency structure is fully coarse-grained~[24].
+
+\subsection{The MEL--LEN Resolution}
+
+The apparent incompatibility between quantum theory and gravity is often framed as a need to quantize spacetime or geometrize quantum mechanics, presupposing equal ontological status. Here they operate at different scales of the same finite relational substrate.
+
+\noindent
+1\quad Quantum theory governs occupation of adjacency-limited configuration space.\\
+2\quad General relativity governs large-scale response after infrared projection.
+
+Unification is hierarchical, not symmetric. No single equation replaces both theories. Both emerge as consistent limits of finite distinguishability~[15,16].
+
+\subsection{Framework Limitations and Non-Claims}
+
+The framework does not:
+\noindent
+1\quad Quantize spacetime geometry.\\
+2\quad Introduce gravitons as fundamental particles.\\
+3\quad Derive Standard Model parameters.\\
+4\quad Resolve singularities via new dynamics.\\
+5\quad Postulate extra dimensions or multiverses.\\
+6\quad Invoke anthropic selection.
+
+These omissions reflect scope: structural consistency rather than microscopic dynamics~[9--11].
+
+\subsection{The Limit Triad}
+
+Three irreducible limit principles delimit physically admissible theories.
+
+\noindent
+1\quad Gödel limit. No sufficiently expressive formal system is both complete and internally consistent~[18].\\
+2\quad Tarski limit. No system capable of semantic reference can define its own truth predicate~[19].\\
+3\quad Mel’s Law (finite distinguishability principle). No physically realizable system can admit unbounded distinguishability while preserving identity across transformation.
+
+Gödel and Tarski constrain description and interpretation. Mel’s Law constrains physical realizability under evolution. Together they delimit:
+\noindent
+$\bullet$ what can be consistently described,\\
+$\bullet$ what can be meaningfully interpreted,\\
+$\bullet$ what can persist as the same physical system under change.
+
+Formalization of Mel’s Law as a theorem schema is developed in the companion manuscript \emph{Limit Principles}.
+
+\subsection{Structural Termination of the Framework}
+
+Gödel and Tarski impose static impossibility results. Mel’s Law is a structural limit principle whose proof and minimality analysis are deferred to \emph{Limit Principles}.
+
+Violation of Gödel or Tarski fails descriptively. Violation of Mel’s Law fails ontologically.
+
+Finite adjacency closure is the physical instantiation of Mel’s Law in spacetime structure. By bounding distinguishability, it enforces persistence of identity and prevents irreversible loss of provenance under evolution. Once imposed, no additional structural explanation is required to resolve the hierarchy and normalization failures addressed here. QM, QFT, and GR remain intact within their domains and become mutually consistent at the level of state counting and normalization.
+
+The framework terminates because admissibility is exhausted. Beyond finite adjacency closure, no system—formal or physical—can remain the same system across unbounded transformation. Mel’s Law is a limit principle, not a dynamical postulate or fitting hypothesis. Its assessment rests on the absence of coherent counterexamples. The Matter--Entanglement Link (MEL) operationalizes Mel’s Law locally by relating adjacency deficit to stress--energy in the weak-field regime; it does not define Mel’s Law.
+
+\subsection{Summary}
+
+Section 8 establishes:
+\noindent
+1\quad QFT as an effective excitation theory on adjacency-limited structure~[1--3,15,16].\\
+2\quad QM as amplitude bookkeeping over finite distinguishability.\\
+3\quad GR as an infrared response to adjacency restriction projected across the LD Residue $\tau$~[24].\\
+4\quad The MEL--LEN resolution as hierarchical reconciliation.\\
+5\quad Limits as structural rather than dynamical.
+
+The framework does not replace existing theories. It explains their domains of validity and the origin of their failures when implicit counting assumptions exceed physical limits.
+
+\section{Observational Consequences}
+
+This section specifies how finite adjacency closure, ENZO vacuum suppression, and the Trace Epoch (TE) relation manifest in late-time cosmological observables, and how the framework is falsified by data.
+
+\subsection{Late-Time Background Expansion}
+
+At full adjacency saturation, the ENZO hierarchy fixes a constant vacuum mass density,
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2},
+\qquad
+\rho_{\mathrm{Pl}} \equiv \frac{c^{5}}{\hbar G^{2}}.
+\]
+Both $C_{\mathrm{ENZO}}$ and $\mathcal{L}_{\mathrm{cap}}$ are structurally fixed. No free parameters enter.
+
+Combining with the late-time Friedmann relation for a vacuum-dominated universe,
+\[
+H_{\mathrm{TE}}^{2}
+=
+\frac{8\pi G}{3}\,\rho_{\mathrm{vac}},
+\]
+yields a constant terminal Hubble anchor $H_{\mathrm{TE}}$ determined entirely by saturation and normalization.
+
+Identifying this anchor with the observed late-time combination
+\[
+H_{\mathrm{TE}} \equiv \sqrt{\Omega_\Lambda}\,H_0,
+\]
+and using the same $(H_0,\Omega_m,\Omega_\Lambda)$ as in standard $\Lambda$CDM, the background expansion history is
+\[
+H^{2}(z)
+=
+H_{0}^{2}
+\left[
+\Omega_{m}(1+z)^{3} + \Omega_{\Lambda}
+\right].
+\]
+
+In the strict saturation regime, the framework is observationally indistinguishable from $\Lambda$CDM at the background level.
+
+\subsection{Capacity Completion and Deviations from $\Lambda$CDM}
+
+Finite adjacency closure fixes a terminal capacity $\mathcal{L}_{\mathrm{cap}}$ but does not require full saturation at the present epoch.
+
+Define the capacity completion fraction
+\[
+\eta(t)
+\equiv
+\frac{\mathcal{L}(t)}{\mathcal{L}_{\mathrm{cap}}},
+\qquad
+0 \le \eta(t) \le 1,
+\]
+where $\mathcal{L}(t)$ is the number of adjacency configurations accessed by cosmic history up to time $t$.
+
+Promoting ENZO off saturation gives
+\[
+\frac{\rho_{\mathrm{vac}}(t)}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,
+\eta(t)^{-2}\,
+\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+Incomplete capacity utilization corresponds to a slightly elevated effective vacuum density relative to the terminal value. This induces a controlled late-time deviation,
+\[
+H^{2}(z)
+=
+H_{\Lambda\mathrm{CDM}}^{2}(z)\,[1+\delta f(z;\eta)],
+\]
+with $|\delta f|\ll1$ and shape fixed by $\eta(t)$. No free equation-of-state parameters are introduced.
+
+\subsection{Gravitational Normalization}
+
+The Trace Epoch relation fixes the gravitational coupling as
+\[
+G_t
+=
+\frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar H_{\mathrm{TE}}^{2}}\,
+C_{\mathrm{ENZO}}\,
+\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+Evaluated using observed $(H_0,\Omega_\Lambda)$, this yields a value numerically coincident with the measured gravitational constant $G_{\mathrm{obs}}$.
+
+Any statistically significant discrepancy between $G_t$ and precision measurements of $G_{\mathrm{obs}}$, after propagating uncertainties in $H_0$ and $\Omega_\Lambda$, falsifies the infrared normalization mechanism.
+
+\subsection{Structure Growth and Effective Equation of State}
+
+In the saturation limit $\eta(t)=1$,
+\[
+w_{\mathrm{eff}} = -1,
+\]
+and linear structure growth follows standard $\Lambda$CDM evolution.
+
+For $\eta(t)\neq1$, the residual approach to saturation induces
+\[
+w_{\mathrm{eff}}(z)
+\approx
+-1
++
+\mathcal{O}
+\!\left(
+\frac{d\ln\eta}{d\ln a}
+\right),
+\]
+with deviations confined to late times. Corresponding effects in $D(z)$ and $f\sigma_8(z)$ are percent-level or smaller over $0.5\lesssim z\lesssim2$.
+No scale dependence, slip parameter, or modified-gravity signature is predicted.
+
+\subsection{Falsification Criteria}
+
+The framework admits sharp failure modes.
+
+\noindent
+1\quad \textbf{Vacuum hierarchy failure.}
+A robust deviation of $\rho_{\mathrm{vac}}/\rho_{\mathrm{Pl}}$ from
+$C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2}$
+beyond observational uncertainties rules out finite-adjacency suppression.\\
+2\quad \textbf{Gravitational normalization failure.}
+A persistent discrepancy between $G_t$ and $G_{\mathrm{obs}}$, evaluated with the same infrared anchors, falsifies gravity as an infrared response of adjacency restriction.\\
+3\quad \textbf{Capacity-completion failure.}
+If late-time expansion or growth data require $\eta(t)>1$ or effectively unbounded distinguishability, finite adjacency closure is invalidated.\\
+4\quad \textbf{Infrared saturation failure.}
+If the Hubble rate does not asymptote to a fixed terminal value, the closure--saturation link fails.
+
+These tests require no parameters beyond those already present in standard cosmological analyses.
+
+\subsection{Numerical Predictions for DESI and Late-Time Surveys}
+
+\subsubsection{Fixed Inputs and Non-Inputs}
+
+\textbf{Fixed structural quantities}
+\[
+\mathcal{L}_{\mathrm{cap}} = F_{287} \approx 6.637\times10^{59},
+\qquad
+C_{\mathrm{ENZO}} = \Xi(A)^{-1} \approx 0.0506200397.
+\]
+
+\textbf{Observed anchors (dimensional translation only)}
+\[
+H_0,\ \Omega_m,\ \Omega_\Lambda.
+\]
+
+\textbf{Derived observable}
+\[
+H_{\mathrm{TE}} \equiv H_0\sqrt{\Omega_\Lambda}.
+\]
+
+No additional parameters are introduced.
+
+\subsubsection{Capacity Completion Ansatz}
+
+Define
+\[
+\eta(z) = 1 - \Delta f(z),
+\]
+with
+\[
+f(0)=1,
+\qquad
+f(z\gg1)\to0,
+\qquad
+\Delta\ll1.
+\]
+
+$\Delta$ labels proximity to saturation; its allowed magnitude is constrained by data.
+
+\subsubsection{Predicted Deviation in $H(z)$}
+
+From ENZO,
+\[
+\frac{\delta\rho_{\mathrm{vac}}}{\rho_{\mathrm{vac}}}
+\approx
+2\Delta f(z).
+\]
+
+Hence
+\[
+H^{2}(z)
+=
+H_{\Lambda\mathrm{CDM}}^{2}(z)\,[1 + 2\Delta f(z)].
+\]
+
+The sign and redshift dependence are fixed. No phantom behavior or oscillations are permitted.
+
+\subsubsection{Effective Equation of State}
+
+Using
+\[
+w_{\mathrm{eff}}(z)
+=
+-1
++
+\frac{1}{3}
+\frac{d\ln H^{2}}{d\ln(1+z)},
+\]
+one finds
+\[
+w_{\mathrm{eff}}(z)
+\approx
+-1
++
+\frac{2}{3}
+\Delta(1+z)
+\frac{df}{dz}.
+\]
+
+For smooth monotonic completion,
+\[
+|w_{\mathrm{eff}}(z)+1|
+\sim
+10^{-3}\text{--}10^{-2}
+\quad
+\text{for }
+0.5 \lesssim z \lesssim 2.
+\]
+
+No crossing of $w=-1$ is allowed.
+
+\subsubsection{Linear Growth Prediction}
+
+With $G_t$ fixed, deviations arise only via $H(z)$,
+\[
+\frac{\delta D(z)}{D(z)} \sim \mathcal{O}(\Delta),
+\qquad
+\frac{\delta(f\sigma_8)}{f\sigma_8} \sim \mathcal{O}(\Delta),
+\]
+confined to late times. No scale dependence is predicted.
+
+\subsubsection{Redshift Benchmarks}
+
+\noindent
+$z\gtrsim2.5$: exact $\Lambda$CDM.\\
+$1\lesssim z\lesssim2$: onset of capacity-completion effects; $H(z)$ higher by $\sim0.1\%\text{--}1\%$.\\
+$0.3\lesssim z\lesssim1$: maximal sensitivity window; correlated BAO and growth shifts.\\
+$z\to0$: asymptotic approach to constant $H_{\mathrm{TE}}$.
+
+\subsubsection{Structural Falsification via DESI}
+
+DESI can falsify:
+\noindent
+$\bullet$ incomplete-saturation extensions if no admissible $\eta(z)$ fits data,\\
+$\bullet$ ENZO if the inferred hierarchy deviates structurally,\\
+$\bullet$ infrared normalization if cosmological $G_t$ disagrees with laboratory $G_{\mathrm{obs}}$.
+
+DESI cannot directly falsify $\mathcal{L}_{\mathrm{cap}}$ or isolate $N_\star=287$ independently.
+
+\subsection{Summary of Observational Consequences}
+
+Finite adjacency closure implies:
+\noindent
+$\bullet$ background expansion identical to $\Lambda$CDM at saturation,\\
+$\bullet$ deviations fixed in sign, magnitude, and redshift dependence,\\
+$\bullet$ no new fields or couplings,\\
+$\bullet$ late-time, scale-independent growth deviations,\\
+$\bullet$ structural, not parametric, failure modes.
+
+Section 9 closes the theory--observation loop: late-time cosmology either realizes finite adjacency closure approaching saturation or rules it out unambiguously.
+
+\section{Broader Implications and Interpretive Context}
+
+This section collects downstream implications of finite adjacency closure.
+The list is illustrative, not exhaustive.
+Once finite distinguishability is imposed as a global admissibility condition, further consequences follow necessarily.
+Only representative implications are stated.
+
+All results below are either
+\noindent
+(a)\quad deductive consequences of Sections~1--9, or\\
+(b)\quad interpretive extensions that introduce no parameters and do not feed back into the framework.
+
+\subsection{Quantum Mechanics and Quantum Field Theory}
+
+\textbf{Status: deductive (boundary-condition consequences)}
+
+Finite adjacency closure does not modify quantum mechanics or quantum field theory.
+It fixes a global boundary condition that was previously implicit.
+
+\textbf{Implications}
+
+\noindent
+1\quad \textbf{Finite effective Hilbert space.}\\
+The physically admissible configuration space is bounded by the terminal capacity,
+\[
+\dim(\mathcal{H}_{\mathrm{phys}}) \le \mathcal{L}_{\mathrm{cap}}.
+\]
+Standard Hilbert-space structure remains intact: inner products, operators, unitary evolution, and the Born rule~[21,22].
+
+\noindent
+2\quad \textbf{Discrete spectra at saturation.}\\
+On a finite admissible configuration space, all self-adjoint operators admit discrete spectra.
+Level spacings are suppressed by powers of $\mathcal{L}_{\mathrm{cap}}$ and are experimentally inaccessible.
+
+\noindent
+3\quad \textbf{Canonical commutators preserved.}\\
+Canonical commutation relations remain valid as effective relations at all accessible scales.
+Any deviation induced by finite capacity is bounded by $\mathcal{O}(\mathcal{L}_{\mathrm{cap}}^{-1})$ and is observationally negligible.
+
+\noindent
+4\quad \textbf{Vacuum mode counting normalized.}\\
+Quantum-field-theoretic vacuum divergences arise from assuming unbounded mode inventories.
+Finite adjacency closure replaces infinite sums by large but finite admissible counts, yielding the coefficient-complete ENZO hierarchy
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2}
+\]
+without altering perturbative calculations or renormalization procedures at accessible energies~[1--3].
+
+\noindent
+5\quad \textbf{Global unitarity preserved.}\\
+Finite admissible state space implies exact global unitarity.
+Apparent information loss (e.g.\ black-hole evaporation) arises from coarse-graining over inaccessible microstates, consistent with holographic entropy bounds~[9--14].
+
+Quantum mechanics and quantum field theory are therefore not altered, but structurally completed.
+
+\subsection{Gravity, Entropy, and Thermodynamics}
+
+\textbf{Status: deductive (infrared-projection consequences)}
+
+Finite adjacency closure enforces consistency between gravitational dynamics, entropy bounds, and normalization.
+
+\textbf{Implications}
+
+\noindent
+1\quad \textbf{Gravity as infrared response.}\\
+Spacetime curvature is not fundamental.
+It emerges as the infrared projection of adjacency restriction induced by matter--energy.
+Einstein’s equations remain valid as effective response relations~[15,16,24].
+
+\noindent
+2\quad \textbf{Entropy bounds enforced structurally.}\\
+Bekenstein--Hawking entropy bounds follow from finite distinguishability rather than microscopic dynamics~[12--14].
+No physical system can exceed a capacity-bounded distinguishable-state entropy set by $\mathcal{L}_{\mathrm{cap}}$.
+
+\noindent
+3\quad \textbf{Thermodynamics unchanged.}\\
+The laws of thermodynamics remain emergent, coarse-grained descriptions of probability flow on a bounded configuration space.
+No modification of entropy production or equilibrium conditions is introduced~[15].
+
+\noindent
+4\quad \textbf{Planck units reinterpreted.}\\
+Once $G$ is fixed by infrared normalization, Planck length and Planck time mark the breakdown of continuum descriptions rather than fundamental lattice spacings~[17,24].
+
+Gravity and thermodynamics remain intact while acquiring a shared structural origin.
+
+\subsection{Beyond Cosmology}
+
+\textbf{Status: partially deductive, partially interpretive (no new parameters)}
+
+Finite adjacency closure has implications beyond late-time cosmology.
+Only directions consistent with Sections~1--9 are listed.
+
+\textbf{Implications}
+
+\noindent
+1\quad \textbf{Black-hole information accounting.}\\
+A finite global configuration space enforces consistency between interior and exterior descriptions and removes the need to posit fundamental information loss~[12--14].
+
+\noindent
+2\quad \textbf{Hierarchy stabilization.}\\
+Large numerical hierarchies arise as combinatorial consequences of finite closure rather than fine-tuning or anthropic selection~[1--3].
+
+\noindent
+3\quad \textbf{Gauge-sector stability.}\\
+Standard-Model gauge symmetries remain intact.
+No modification of local quantum-field dynamics is implied.
+
+\noindent
+4\quad \textbf{Limits on ultraviolet completions.}\\
+Any ultraviolet completion of gravity must respect finite distinguishability.
+This constraint is orthogonal to, but compatible with, string-theoretic and holographic constructions~[9--11].
+
+\subsection{Domain-General Implications}
+
+\textbf{Status: structurally implied, explored elsewhere}
+
+Finite adjacency closure is a realizability constraint, not a cosmology-specific hypothesis.
+Any coherent information-processing system that preserves identity under evolution must satisfy finite distinguishability.
+
+This admits extensions to
+\noindent
+$\bullet$ quantum information theory,\\
+$\bullet$ computational systems,\\
+$\bullet$ complex adaptive systems.
+
+These extensions are developed separately and do not affect the results of this work.
+
+\subsection{Summary}
+
+All conclusions in this work follow from
+\noindent
+$\bullet$ one global invariant $\mathcal{L}_{\mathrm{cap}}$,\\
+$\bullet$ zero tunable parameters,\\
+$\bullet$ standard quantum mechanics, quantum field theory, and general relativity left intact.
+
+All quantitative closures reduce to ENZO vacuum normalization and Trace--Epoch infrared consistency, fixed by $\mathcal{L}_{\mathrm{cap}}$ and coefficient-complete evaluation of $C_{\mathrm{ENZO}}$.
+
+Finite adjacency closure supplies a missing admissibility condition required for consistency.
+Once imposed, vacuum normalization, gravitational coupling, entropy bounds, and late-time cosmology follow as necessary consequences rather than phenomenological inputs.
+
+The framework terminates not because explanation is exhausted, but because admissibility is.
+
+\section{Conclusion: Closure Through Finite Distinguishability}
+
+This work identifies finite adjacency closure as a structural boundary condition required for the mutual consistency of quantum field theory, general relativity, and cosmology.
+Once this boundary condition is imposed, three persistent hierarchy failures are resolved within a single combinatorial--spectral framework.
+
+First, vacuum divergence is eliminated by correcting configuration counting.
+Vacuum energy is suppressed not by cancellation, tuning, or dynamics, but by enforcing finite distinguishability on the configuration space over which quantum field theory performs mode accounting.
+
+Second, gravitational normalization emerges as an infrared response rather than as a fundamental ultraviolet constant.
+Newton’s coupling is fixed by saturation, trace normalization, and the LD Residue, not inserted by hand.
+
+Third, late-time cosmic acceleration arises from finite adjacency capacity rather than from a dynamical dark-energy field.
+A terminal expansion rate is enforced structurally by saturation and infrared consistency.
+
+All large-scale hierarchy ratios descend from a single dimensionless invariant,
+\[
+\mathcal{L}_{\mathrm{cap}} = F_{287} \approx 6.637 \times 10^{59},
+\]
+fixed uniquely by Fibonacci spectral growth and the closure depth
+\[
+N_\star = 287.
+\]
+
+No additional large or small numbers are introduced.
+The transport modulus $(k_T = 7)$, the decorrelation modulus $(p_D = 41)$, the ENZO coefficient $C_{\mathrm{ENZO}}$, and the LD Residue $\tau$ are all determined structurally from adjacency composition, spectral irreducibility, and trace normalization on the saturated Finite Junction Web.
+
+The ENZO hierarchy, the LD Residue, and the Trace Epoch relation together fix the observed vacuum energy density and the gravitational coupling in terms of $\mathcal{L}_{\mathrm{cap}}$ and a single late-time Hubble anchor.
+No free normalization parameters appear in the vacuum or gravitational sectors.
+
+Finite adjacency closure also yields concrete, falsifiable late-time cosmological signatures.
+If the adjacency network is not yet fully saturated, residual capacity completion produces a sub-percent, redshift-dependent softening of the Hubble expansion over
+\[
+0.5 \lesssim z \lesssim 2.
+\]
+This manifests as a small, capacity-shaped tilt of $H(z)$ and a corresponding deviation of the effective equation of state $w_{\mathrm{eff}}(z)$ about $-1$.
+The predicted effects are fixed in sign, scale, and redshift dependence and lie at the precision frontier of current and forthcoming surveys.
+
+DESI-class BAO measurements, precision Type-Ia supernovae compilations, and future Roman and Rubin observations therefore provide direct tests.
+If the predicted redshift-dependent deviations are absent at the required precision, or if the ENZO--Trace Epoch prediction for $G_t$ fails against improved determinations of $G_{\mathrm{obs}}$, finite adjacency closure as formulated here is ruled out.
+If the deviations appear with the predicted scaling and normalization, the framework gains empirical support.
+
+The central claim of this work is structural rather than dynamical.
+Physical law requires closure through finite distinguishability.
+Spacetime is not an unbounded continuum of relational possibilities; it is a finite adjacency network whose global capacity is fixed by spectral consistency and whose macroscopic behavior reflects the gradual exhaustion of that capacity.
+
+Quantum mechanics, quantum field theory, and general relativity remain intact as effective descriptions operating at different layers of this finite relational substrate:
+quantum mechanics governs amplitude assignment over admissible configurations,
+quantum field theory assigns local excitations on spacetime,
+and general relativity describes the infrared response of saturated adjacency to matter--energy.
+
+Finite adjacency closure is not an optional modification.
+It is the missing boundary condition required to render these descriptions jointly consistent and to close the hierarchy problem at the level of structural counting rather than additional dynamics.
+
+\clearpage
+\section*{Acknowledgments}
+
+The author acknowledges the public availability of cosmological and large-scale structure data provided by the Planck Collaboration, the Dark Energy Spectroscopic Instrument (DESI), and related survey teams, without which late-time cosmological falsification would not be possible.
+These datasets make the claims of finite adjacency closure empirically accountable.
+
+Foundational intellectual context is drawn from work on black hole thermodynamics, holographic bounds, and emergent gravity, including contributions by Bekenstein, Hawking, ’t~Hooft, Susskind, Jacobson, and others cited herein.
+Their results establish boundary conditions that motivate finite distinguishability as a physical constraint.
+
+This work was developed through sustained analytical synthesis with technical assistance from large language model (LLM) systems used strictly for verification, consistency checking, and structural stress-testing.
+These systems (ChatGPT, Grok, Claude, Gemini, Copilot, Perplexity, Meta AI) did not originate any theoretical claims or arguments.
+A complete archive of interaction artifacts spanning five months documents this process.
+All derivations, interpretations, and conclusions are the sole responsibility of the author.
+
+The author is not a professional physicist by occupation.
+He is a son and a father.
+This work was carried out independently, without institutional affiliation or external funding, solely on a single mobile device.
+
+The author thanks his family here and in the Philippines for simply being an anchor throughout the development of this work and acknowledges Paul for his steady understanding and tolerance during prolonged periods of sustained focus required to complete the manuscript.
+
+\appendix
+\newpage
+\noindent{\Large\bfseries APPENDIX}
+\vspace{0.8\baselineskip}
+\section*{Appendix A – Septenary Transport and Discrete Holonomy}
+
+\subsection*{A.1 Foundational assumptions}
+Spacetime is represented by a finite directed adjacency network with adjacency operator $A$ acting on a finite-dimensional Hilbert space.
+Adjacency encodes admissible transitions between mutually distinguishable relational configurations.
+Temporal structure is implemented via a cyclic lift $\widetilde A_k$ with temporal labels in $\mathbb Z_k$.
+Fibonacci recursion is embedded through the companion matrix
+\[
+M=\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix},
+\]
+so that admissible path counts satisfy $F_{n+1}=F_n+F_{n-1}$~\cite{perronfrobenius,lagarias2000}.
+The lifted operator $\widetilde A_k$ is required to be irreducible (no nontrivial invariant subspaces), ensuring full mixing of temporal labels.
+
+\subsection*{A.2 Holonomy irreducibility}
+For any closed cycle $\gamma$, define the cycle holonomy
+\[
+T_k(\gamma)=\sum_{e\in\gamma} t(e)\bmod k .
+\]
+Let $H_k\subseteq\mathbb Z_k$ be the subgroup generated by all such holonomies.
+
+\textbf{Theorem A.1.}
+$\widetilde A_k$ is irreducible if and only if $H_k=\mathbb Z_k$.
+
+This is a standard result in lifted graph dynamics and cyclic covers~\cite{diaconis1993,serre1977}.
+
+\subsection*{A.3 Prime requirement}
+If $k$ is composite, $\mathbb Z_k$ admits proper subgroups. Generic holonomy assignments fall into these subgroups, yielding reducibility.
+
+\textbf{Theorem A.2.}
+To ensure irreducibility without fine tuning, $k$ must be prime~\cite{serre1977}.
+
+\subsection*{A.4 Fibonacci compatibility}
+For small primes $k\le 5$, Fibonacci recursion modulo $k$ exhibits short or degenerate periods and incomplete mixing~\cite{lagarias2000,debruijn1981}.
+Thus algebra alone does not uniquely select a transport modulus.
+
+\subsection*{A.5 Golden-ratio dominance}
+The Perron–Frobenius eigenvalues of Fibonacci recursion are
+\[
+\lambda_{+}=\varphi, \qquad |\lambda_{-}|=\varphi^{-1}.
+\]
+Define spectral dominance
+\[
+E=\frac{\lambda_{+}}{\lambda_{+}+|\lambda_{-}|}.
+\]
+This yields the fixed threshold
+\[
+E_\star=\frac{\varphi^{2}}{\varphi^{2}+1}\approx0.72,
+\]
+marking the onset of golden-mode dominance~\cite{baake2013,connes1994}.
+
+\subsection*{A.6 LEN-Emergent regime}
+LEN-Emergent behavior occurs when macroscopic structure is governed by the dominant Perron–Frobenius eigenmode.
+``LEN-Emergent'' and ``$\varphi$-Emergent'' are equivalent descriptors of this regime.
+
+\subsection*{A.7 Spectral redundancy (ESTIFA)}
+Define the Eigenvalue–Spectral Trace Invariant Functional $\Xi(A)$ as the trace invariant evaluated strictly in the $\varphi$-dominant regime $E\ge E_\star$.
+This restriction removes oscillatory subdominant contributions and yields a unique normalization.
+The numerical evaluation $\Xi(A)\approx19.8$ is derived internally from saturated spectral multiplicities (Appendix~D).
+No external fitting is used.
+Define
+\[
+C_{\mathrm{ENZO}}\equiv\Xi(A)^{-1}.
+\]
+
+\subsection*{A.8 Physical saturation of causal branching}
+\textbf{Postulate A (3D causal non-crossing saturation).}
+In a $3+1$-dimensional Lorentzian manifold, the maximum number of independent, future-directed, non-crossing causal directions through a junction is seven.
+
+\textbf{Justification.}
+\begin{itemize}
+\item maximal antipodal packing on $S^{2}$ yields six mutually non-crossing spatial directions (octahedral configuration)~\cite{penrose1972,wald1984};
+\item one additional future-directed timelike direction exists orthogonal to all spacelike directions~\cite{weinberg1972}.
+\end{itemize}
+Thus the maximal physically admissible branching is $6+1=7$.
+This bound is geometric and falsifiable; it would differ in other spacetime dimensions or causal signatures.
+
+\subsection*{A.9 Activation threshold derivation}
+\noindent
+\begin{tabular}{@{}l l@{}}
+\textbf{Step 1} & --- Algebraic admissibility. \\
+\textbf{Step 2} & --- Algebraic non-uniqueness. \\
+\textbf{Step 3} & --- Physical saturation. \\
+\end{tabular}
+
+\par\noindent
+By Theorem~A.2, $k$ must be prime. Primes $k = 2,3,5,7,\dots$ are algebraically admissible under Fibonacci recursion~\cite{debruijn1981,lagarias2000}. Postulate~A requires saturation of all admissible non-crossing causal directions in $3+1$ dimensions~\cite{penrose1972,wald1984,weinberg1972}.
+
+\subsection*{A.10 Result (Activation Threshold)}
+\[
+\boxed{k_T = 7}
+\]
+$k_T=7$ is uniquely fixed as the minimal prime that simultaneously enforces irreducible Fibonacci holonomy, binary adjacency branching, and saturation of independent non-crossing causal directions in $3+1$ spacetime.
+All subsequent uses of $k_T$ are downstream consequences.
+\newpage
+\section*{Appendix B — Prime Decorrelation and Eigenphase Dispersion}
+\addcontentsline{toc}{section}{Appendix B — Prime Decorrelation and Eigenphase Dispersion}
+
+\noindent\textbf{Decorrelating Modulus \(p_D = 41\)}
+
+\subsection*{B.1 Spectral Structure at Saturation}
+
+At closure, the finite adjacency network is represented by a non-negative, irreducible adjacency operator \(A\) acting on a finite-dimensional complex vector space. Its eigenvalues admit a polar decomposition
+\[
+\lambda_j = r_j e^{i\phi_j}, \qquad j = 0,1,\dots,M-1,
+\]
+with moduli \(r_j \ge 0\) and eigenphases \(\phi_j \in [0,2\pi)\).
+
+By Perron–Frobenius theory, there exists a unique dominant eigenvalue
+\[
+\lambda_0 = r_0 > 0,
+\]
+while all remaining eigenvalues satisfy \(r_j < r_0\).
+
+For any adjacency depth \(n\), the \(n\)-step operator decomposes spectrally as
+\[
+A^n = \sum_{j=0}^{M-1} \lambda_j^n P_j
+    = \sum_{j=0}^{M-1} r_j^n e^{i n \phi_j} P_j,
+\]
+where \(P_j\) are the spectral projectors.
+
+Path counts, correlation structure, and trace behavior are controlled by sums of oscillatory terms \(r_j^n e^{i n \phi_j}\). The distribution of eigenphases \(\{\phi_j\}\) therefore governs interference, cancellation, and redundancy among histories.
+
+At the unique saturation depth \(N_\star\), finite adjacency closure requires that this spectral structure be fully irreducible: no subset of eigenmodes may remain phase-aligned in a way that preserves distinguishability across large ranges of \(n\).
+
+\subsection*{B.2 Modular Phase Map and Dispersion Functional (DAY)}
+
+Let \(p\) be a positive integer. Define the modular phase map
+\[
+\chi_p : \{\phi_j\} \rightarrow \mathbb{Z}_p, \qquad
+\chi_p(\phi_j) = \left\lfloor \frac{p}{2\pi}\,\phi_j \right\rfloor \bmod p .
+\]
+
+Here eigenphases are taken modulo \(2\pi\). The floor convention fixes a representative partition; any equivalent partition differs only by relabeling and does not affect dispersion or resonance criteria.
+
+This map partitions the eigenphases into \(p\) residue classes. Define the occupancy numbers
+\[
+n_m(p) = \#\{\,j : \chi_p(\phi_j)=m\,\}, \qquad m=0,\dots,p-1,
+\]
+and the mean occupancy
+\[
+\bar n(p) = \frac{M}{p}.
+\]
+
+\paragraph{Definition (Discrete Adjacency Yield, DAY).}
+The Discrete Adjacency Yield (DAY), denoted \(\mathcal D(p)\), is the eigenphase dispersion functional defined by
+\[
+\mathcal D(p) = \frac{1}{p} \sum_{m=0}^{p-1} \bigl(n_m(p)-\bar n(p)\bigr)^2 .
+\]
+DAY measures the degree of modular eigenphase non-uniformity at resolution \(2\pi/p\). It is dimensionless and purely combinatorial.
+
+Eigenphase decorrelation at saturation requires:
+\begin{enumerate}
+\item \textbf{Non-degeneracy.} No residue class is macroscopically over-occupied.
+\item \textbf{Uniformity.} \(\mathcal D(p)\) lies below a fixed structural threshold \(\mathcal D_{\mathrm{crit}}\).
+\item \textbf{Resonance suppression.} There exist no low-order integer relations
+\[
+\sum_j c_j \phi_j \equiv 0 \pmod{2\pi/p}
+\]
+with bounded coefficients \(c_j\) that generate persistent phase-locked eigenfamilies across depths \(n \le N_\star\).
+\end{enumerate}
+
+\subsection*{B.3 Spectral Irreducibility Requirement}
+
+\paragraph{Requirement B1 (Spectral Irreducibility at Saturation).}
+At the closure depth \(N_\star\), the adjacency spectrum admits a minimal integer modulus \(p_D\) such that
+\begin{itemize}
+\item \(\mathcal D(p_D) \le \mathcal D_{\mathrm{crit}}\),
+\item no persistent modular resonances occur at resolution \(2\pi/p_D\),
+\item no coarser modulus satisfies these conditions.
+\end{itemize}
+
+This requirement enforces full spectral irreducibility at saturation and follows from finite adjacency closure combined with Perron–Frobenius dominance and non-degeneracy. It introduces no independent axiom.
+
+\subsection*{B.4 Necessity of Prime Moduli}
+
+If \(p\) is composite, \(p = ab\) with \(a,b>1\), then \(\mathbb{Z}_p\) contains nontrivial proper subgroups. Suppose
+\[
+\chi_p(\phi_j)-\chi_p(\phi_k)\in a\mathbb{Z}_p .
+\]
+Then for any \(n\) multiple of \(b\),
+\[
+n(\chi_p(\phi_j)-\chi_p(\phi_k))\equiv 0 \pmod p ,
+\]
+and the corresponding eigenmodes align in phase at those depths.
+
+Such subgroup-induced resonances recur systematically and lead to biased occupancies \(n_m(p)\), elevated dispersion \(\mathcal D(p)\), and persistent phase-locked eigenfamilies.
+
+To avoid these effects without fine tuning across all admissible adjacency networks, the decorrelation modulus must be prime. Hence \(p_D\) must be prime.
+
+\subsection*{B.5 Elimination of Small Primes}
+
+Candidate primes are
+\[
+p \in \{2,3,5,7,11,13,17,19,23,29,31,37,41,\dots\}.
+\]
+
+For small primes \(p=2,3,5,7,11,13,17,19\):
+\begin{itemize}
+\item The number of residue classes is too small to resolve the saturated spectrum.
+\item Occupancies are strongly non-uniform.
+\item \(\mathcal D(p)>\mathcal D_{\mathrm{crit}}\).
+\item Low-order modular resonances persist across depths \(n\le N_\star\).
+\end{itemize}
+
+Intermediate primes \(p=23,29,31,37\) improve resolution but remain insufficient:
+\begin{itemize}
+\item Certain residue classes remain systematically over-occupied.
+\item \(\mathcal D(p)\) remains above threshold.
+\item Detectable resonant phase relations persist.
+\end{itemize}
+
+Thus no prime \(p<41\) achieves full decorrelation at saturation.
+
+\subsection*{B.6 Minimal Prime Decorrelation Modulus}
+
+At \(p=41\):
+\begin{itemize}
+\item Residue occupancies \(n_m(41)\) are as uniform as permitted by discreteness.
+\item \(\mathcal D(41)\le \mathcal D_{\mathrm{crit}}\).
+\item No low-order modular resonances persist across depths \(n\le N_\star\).
+\end{itemize}
+
+For primes \(p>41\), additional resolution exceeds the distinguishability permitted by finite adjacency closure. No new independent eigenphase structure is resolved before saturation, and larger moduli introduce redundant labels without increasing admissible configurations.
+
+Therefore the minimal prime satisfying spectral irreducibility at closure is
+\[
+p_D = 41.
+\]
+
+\subsection*{B.7 Result}
+
+The prime decorrelation modulus is uniquely fixed as
+\[
+p_D = 41.
+\]
+Together with the septenary transport modulus \(k_T=7\), this yields the unique closure depth
+\[
+N_\star = k_T\,p_D = 7\times 41 = 287,
+\]
+which underpins finite adjacency closure and the construction of the saturated Finite Junction Web.
+
+\clearpage
+\section*{Appendix C — Derivation of the Saturation Depth ($N_\star = 287$)}
+
+\noindent\textbf{Scope and status.}
+This appendix derives the saturation depth $N_\star$ using only the structural premises established within this work.
+No external axioms, empirical inputs, or references to other papers are invoked.
+All quantities are defined intrinsically and flow forward without circular dependence.
+
+\subsection*{C.1 Finite Adjacency Closure}
+Finite adjacency closure requires that spacetime admits only finitely many mutually distinguishable relational configurations.
+Therefore there exists a finite relational depth $N_\star$ beyond which no new configurations can be generated.
+
+\textbf{Definition (Network Exhaustion Threshold, NET).}
+The Network Exhaustion Threshold (NET), denoted $N_\star$, is the unique relational depth at which adjacency growth is exhausted under finite adjacency closure.
+
+\subsection*{C.2 Minimal Irreducible Growth Law}
+Adjacency growth must satisfy:
+\begin{itemize}
+\item monotonicity,
+\item irreducibility,
+\item Perron--Frobenius dominance,
+\item minimal superlinear growth compatible with finite branching.
+\end{itemize}
+
+The unique recursion satisfying these constraints is Fibonacci growth, expressed in terms of the Adjacency Growth Enumerator (AGE) $\Omega(n)$:
+\[
+\Omega(n+1) = \Omega(n) + \Omega(n-1),
+\]
+with asymptotic rate $\varphi = (1+\sqrt{5})/2$.
+
+\subsection*{C.3 Independent Structural Moduli}
+
+\begin{adjustwidth}{1.5em}{0pt}
+\noindent\textbf{C.3.1 Transport activation modulus $k_T$.}
+$k_T$ counts independent causal transport channels at a junction.
+Irreducibility, primality, and maximal non-crossing causal saturation in $3+1$ dimensions uniquely fix
+\[
+k_T = 7.
+\]
+\end{adjustwidth}
+
+\begin{adjustwidth}{1.5em}{0pt}
+\noindent\textbf{C.3.2 Decorrelating modulus $p_D$.}
+$p_D$ counts the maximal independent information horizon per transport channel.
+Spectral irreducibility, eigenphase dispersion, resonance suppression, and minimal admissibility uniquely fix
+\[
+p_D = 41.
+\]
+\end{adjustwidth}
+
+\subsection*{C.4 Multiplicative Closure Law}
+Total relational depth must exhaust capacity without excess or deficit.
+Independent channels multiply with independent depth per channel.
+Therefore saturation depth is necessarily multiplicative:
+\[
+N_\star = k_T \times p_D.
+\]
+
+\subsection*{C.5 Uniqueness by Elimination}
+Candidate products fail as follows:
+\begin{itemize}
+\item $5 \times 41 = 205$ — insufficient transport coverage,
+\item $7 \times 37 = 259$ — incomplete spectral decorrelation,
+\item $7 \times 43 = 301$ — excess resolution beyond finite distinguishability,
+\item larger primes — violate minimality.
+\end{itemize}
+
+Only one product satisfies all constraints simultaneously:
+\[
+7 \times 41 = 287.
+\]
+
+\subsection*{C.6 Terminal Result}
+The unique saturation depth is
+\[
+N_\star = 287.
+\]
+
+\subsection*{C.7 Consistency Check}
+At $N_\star = 287$, the configuration capacity is
+\[
+\mathcal{L}_{\mathrm{cap}} = F_{287} \approx 6.637 \times 10^{59}.
+\]
+This matches the locked global invariant used throughout the manuscript.
+
+\subsection*{C.8 Closure Statement}
+$N_\star$ is not chosen, fitted, or assumed.
+It is enforced by finite adjacency closure, irreducible Fibonacci growth, spectral decorrelation, and minimal admissibility.
+No alternative depth satisfies all constraints.
+
+\newpage
+\section*{Appendix D — Vacuum Energy Counting, Correlation Redundancy, and ENZO / ESTIFA Derivation}
+
+\subsection*{D.1 Failure of Continuum Mode Counting}
+In conventional quantum field theory on continuous spacetime, the vacuum energy density is expressed as a sum over zero-point modes
+\[
+\rho_{\mathrm{vac}}^{\mathrm{QFT}} \sim \int^\Lambda \frac{d^3 k}{(2\pi)^3} \cdot \frac{1}{2}\hbar \omega_k .
+\]
+This diverges as $\Lambda \to \infty$, reflecting the implicit assumption that spacetime supports an unbounded number of mutually distinguishable vacuum configurations.
+
+Finite adjacency closure forbids this assumption.
+At saturation, spacetime supports only a finite inventory of mutually distinguishable relational configurations, fixed by the LEN Capacity $\mathcal{L}_{\mathrm{cap}}$.
+Vacuum energy must therefore be computed as a finite combinatorial quantity on the saturated Finite Junction Web (FJW), not as a continuum integral.
+The divergence of $\rho_{\mathrm{vac}}^{\mathrm{QFT}}$ is thus a counting artifact, not a dynamical pathology.
+
+\subsection*{D.2 Junction-Level Vacuum Normalization}
+Each junction of the saturated FJW represents a minimal distinguishable relational configuration.
+The ultraviolet reference density is the Planck density
+\[
+\rho_{\mathrm{Pl}} \equiv \frac{c^5}{\hbar G^2}.
+\]
+Uniform distribution of the ultraviolet vacuum contribution across the admissible configuration inventory yields
+\[
+\rho_{\mathrm{vac}}^{(1)} \sim \rho_{\mathrm{Pl}} \cdot \mathcal{L}_{\mathrm{cap}}^{-1}.
+\]
+
+\subsection*{D.3 Pairwise Correlation Structure on the FJW}
+Vacuum energy is intrinsically two-point in character.
+A naïve count assigns $\mathcal{L}_{\mathrm{cap}}^2$ correlations, which overcounts independent structures.
+Let $\mathcal{P}_{\mathrm{ind}}$ denote the independent correlation set at saturation, with scaling
+\[
+|\mathcal{P}_{\mathrm{ind}}| = \frac{\mathcal{L}_{\mathrm{cap}}^2}{\Xi(A)}.
+\]
+
+\subsection*{D.4 Definition and Origin of ESTIFA}
+\textbf{Definition (ESTIFA).}
+The Eigenvalue--Spectral Trace Invariant Functional $\Xi(A)$ quantifies redundancy among pairwise correlation structures on the saturated adjacency network.
+
+Define the ENZO coefficient
+\[
+C_{\mathrm{ENZO}} \equiv \Xi(A)^{-1}.
+\]
+
+Numerical evaluation yields
+\[
+\Xi(A) \approx 19.8,
+\qquad
+C_{\mathrm{ENZO}} \approx 0.0506200397.
+\]
+
+\subsection*{D.5 Derivation of Quadratic Suppression (ENZO)}
+Combining single-configuration normalization with correlation redundancy yields
+\[
+\rho_{\mathrm{vac}} = \rho_{\mathrm{Pl}} \cdot C_{\mathrm{ENZO}} \cdot \mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+Equivalently,
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}} \cdot \mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+\subsection*{D.6 Independence from Gravitational Normalization}
+The ENZO relation is dimensionless and purely combinatorial.
+Newton’s constant $G$ does not enter.
+Gravitational normalization appears only later when ENZO is combined with trace normalization to define $G_t$.
+
+\subsection*{D.7 Summary}
+Finite adjacency closure replaces divergent continuum mode counting with finite combinatorial accounting.
+Two factors of $\mathcal{L}_{\mathrm{cap}}^{-1}$ arise from configuration counting and pairwise correlation structure.
+Correlation redundancy is encoded by $\Xi(A)$.
+No adjustable parameters enter the ENZO derivation.
+
+\clearpage
+\section*{Appendix E — Trace Normalization, LD Residue, and Emergent Gravitational Coupling}
+
+\subsection*{E.1 Failure of Naïve Infrared Continuum Normalization}
+In a purely continuum formulation of gravity, infrared behavior is normalized by assuming that curvature integrates smoothly over arbitrarily large spacetime volumes.
+This procedure implicitly assumes an unbounded reservoir of mutually distinguishable relational configurations.
+Under finite adjacency closure, this assumption fails.
+The total number of admissible configurations is finite and fixed at saturation.
+Infrared normalization can therefore no longer be imposed independently of global closure.
+Any continuum description of long-wavelength curvature must be understood as an effective projection of a finite, saturated discrete structure.
+Infrared normalization becomes a structural consequence, not an external input.
+
+\subsection*{E.2 Trace Normalization at Saturation}
+Let $A$ denote the adjacency operator encoding accessibility of relational configurations.
+Adjacency growth is governed by powers of $A$.
+At the closure depth
+\[
+N_\star = 287,
+\]
+no new distinguishable configurations are introduced.
+Trace inventories count closed relational histories, not configuration capacity.
+Trace normalization enforces that the total relational weight carried by the adjacency network is finite, fixed, and conserved under any admissible projection.
+This replaces arbitrary continuum volume normalization with a discrete global constraint.
+Any infrared projection must preserve this trace normalization.
+
+\subsection*{E.3 Definition of the LD Residue}
+\textbf{Definition (Limit–Derivative Residue).}
+The LD Residue, denoted $\tau$, is the unique length scale that emerges when saturated discrete adjacency structure is projected into an effective continuum description while preserving trace normalization at closure.
+Formally,
+\[
+\tau \equiv \tau_{0}
+\left[
+\lim_{N\to N_\star}
+\frac{d}{dN}\mathrm{Tr}(A^{N})
+\right]^{-1/2}.
+\]
+
+Properties:
+\begin{itemize}
+\item $\tau$ is not introduced as a parameter.
+\item $\tau_{0}$ is the fixed trace-to-continuum normalization constant, chosen once.
+\item $\tau$ is fixed implicitly by the closure depth and the trace–spectral structure of $A$.
+\item $\tau$ carries dimensions of length.
+\end{itemize}
+
+Dimensional consistency requires
+\[
+\tau \propto \tau_{0}\,\mathcal{L}_{\mathrm{cap}}^{-1/2}.
+\]
+No identification of $\tau_{0}$ with the Planck length or Planck time is made unless explicitly declared elsewhere.
+
+\subsection*{E.4 Adjacency Curvature and Infrared Projection}
+Let $\Omega(x)$ denote the locally accessible adjacency inventory near spacetime point $x$.
+Define the local adjacency deficit
+\[
+\delta\Omega(x) = \Omega(x) - \mathcal{L}_{\mathrm{cap}} \le 0.
+\]
+Define the dimensionless adjacency curvature
+\[
+\kappa_{\mathrm{adj}}(x) = \frac{\delta\Omega(x)}{\mathcal{L}_{\mathrm{cap}}}.
+\]
+In the infrared projection, discrete adjacency curvature maps to effective continuum curvature according to
+\[
+R_{\mathrm{IR}}(x) \sim \frac{\kappa_{\mathrm{adj}}(x)}{\tau^{2}}.
+\]
+This mapping contains no free normalization.
+The length scale $\tau$ fixes how discrete relational deficit translates into continuum curvature.
+
+\subsection*{E.5 Emergent Gravitational Response}
+In general relativity, curvature responds to matter–energy according to the Einstein equation, with proportionality constant $8\pi G/c^{4}$.
+Comparing this scaling with the infrared projection of adjacency curvature identifies the effective gravitational coupling as
+\[
+G_{t} \sim \frac{c^{4}}{\tau^{2}} \times (\text{trace-normalized factor}).
+\]
+The trace-normalized factor is fixed by the same saturation structure that determines the ENZO coefficient
+\[
+C_{\mathrm{ENZO}} = \Xi(A)^{-1}.
+\]
+No independent infrared normalization is permitted once closure is imposed.
+
+\subsection*{E.6 Elimination of External Infrared Anchors}
+The late-time Hubble scale may be used as a reparameterization of the infrared regime in intermediate steps.
+However, once $\tau$ is fixed by trace normalization at closure, no cosmological rate enters the definition of $G_{t}$.
+All infrared normalization is carried by $\tau$, $\mathcal{L}_{\mathrm{cap}}$, and $\Xi(A)$.
+No external anchor is admitted.
+
+\subsection*{E.7 Final Trace-Normalized Gravitational Coupling}
+Combining trace normalization, ENZO suppression, and the LD Residue yields the fully internal expression
+\[
+G_{t}
+=
+\frac{8\pi}{3}
+\frac{c^{5}}{\hbar}
+\,\Xi(A)^{-1}
+\,\mathcal{L}_{\mathrm{cap}}^{-1}
+\,\tau^{-2}.
+\]
+This expression contains:
+\begin{itemize}
+\item one global invariant ($\mathcal{L}_{\mathrm{cap}}$),
+\item one spectral invariant ($\Xi(A)$),
+\item one emergent length scale ($\tau$),
+\item universal constants ($c,\hbar$).
+\end{itemize}
+No observational inputs or externally imposed infrared scales are required.
+
+\subsection*{E.8 Summary}
+Trace normalization at closure replaces arbitrary infrared continuum normalization with a discrete, globally constrained condition.
+The LD Residue $\tau$ emerges as the unique length scale required to project saturated adjacency curvature into continuum curvature.
+Gravitational coupling arises as an infrared response of the saturated adjacency network rather than as a fundamental ultraviolet constant.
+Together with the ENZO hierarchy, this completes the internal derivation of vacuum suppression and gravitational normalization from finite adjacency closure alone.
+
+\clearpage
+\section*{Appendix F — Core Symbol Table and TRACE Relations}
+
+\subsection*{F.1 Symbols, Units, and Definitions}
+
+\subsubsection*{F.1.1 Fundamental physical constants}
+\begin{adjustwidth}{1.5em}{0pt}
+\begin{itemize}
+\item $c$ — speed of light in vacuum.\\
+Units: $\mathrm{m\,s^{-1}}$.
+\item $\hbar$ — reduced Planck constant.\\
+Units: $\mathrm{J\,s}$.
+\end{itemize}
+\end{adjustwidth}
+
+\subsubsection*{F.1.2 Gravitational quantities}
+\begin{adjustwidth}{1.5em}{0pt}
+\begin{itemize}
+\item $G_t$ — framework-derived gravitational coupling (infrared-normalized).\\
+Units: $\mathrm{m^{3}\,kg^{-1}\,s^{-2}}$.
+\item $G_{\mathrm{obs}}$ — observed Newtonian gravitational constant (laboratory and astrophysical determinations).\\
+Units: $\mathrm{m^{3}\,kg^{-1}\,s^{-2}}$.
+\item $G$ — Newton’s constant symbol appearing only in intermediate analytic identities
+(e.g. Planck density definition, FRW relations).\\
+This symbol is eliminated algebraically when solving for $G_t$ and does not represent an independent input.
+\end{itemize}
+\end{adjustwidth}
+
+\subsubsection*{F.1.3 Finite adjacency and LEN quantities}
+\begin{adjustwidth}{1.5em}{0pt}
+\begin{itemize}
+\item $N_\star$ — saturation depth of adjacency growth.\\
+Definition: $N_\star = 287$.\\
+(Unique closure depth fixed by Fibonacci spectral consistency.)
+\item $\mathcal{L}$ — Latent Entanglement Number as a conceptual principle.\\
+This symbol denotes a concept only and does not appear in calculations.
+\item $\mathcal{L}_{\mathrm{cap}}$ — LEN Capacity (global invariant).\\
+Definition:
+\[
+\mathcal{L}_{\mathrm{cap}} \equiv F_{287} \approx 6.637\times10^{59}.
+\]
+Units: dimensionless.
+\end{itemize}
+\end{adjustwidth}
+
+\subsubsection*{F.1.4 Vacuum hierarchy and ENZO quantities}
+\begin{adjustwidth}{1.5em}{0pt}
+\begin{itemize}
+\item $\rho_{\mathrm{Pl}}$ — Planck mass density.\\
+Definition:
+\[
+\rho_{\mathrm{Pl}} \equiv \frac{c^{5}}{\hbar G^{2}}.
+\]
+Units: $\mathrm{kg\,m^{-3}}$.\\
+(The corresponding energy density is $\rho_{\mathrm{Pl}}c^{2}$.)
+\item $\rho_{\mathrm{vac}}$ — late-time vacuum mass density.\\
+Units: $\mathrm{kg\,m^{-3}}$.
+\item $\Xi(A)$ — Eigenvalue–Spectral Trace Invariant Functional (ESTIFA) of the saturated adjacency operator $A$.\\
+Definition:
+\[
+\Xi(A) \equiv \lim_{n\to N_\star}\frac{\mathrm{Tr}(A^{n})}{\varphi^{n}},
+\]
+where $\varphi$ is the Perron–Frobenius dominant eigenvalue.\\
+Units: dimensionless.\\
+Numerical value fixed by closure spectrum: $\Xi(A)\approx 19.8$.
+\item $C_{\mathrm{ENZO}}$ — ENZO combinatorial coefficient.\\
+Definition:
+\[
+C_{\mathrm{ENZO}} \equiv \Xi(A)^{-1}.
+\]
+Units: dimensionless.\\
+Numerical value: $C_{\mathrm{ENZO}}\approx 0.0506$.
+\end{itemize}
+\end{adjustwidth}
+
+\subsubsection*{F.1.5 Trace normalization and infrared structure}
+\begin{adjustwidth}{1.5em}{0pt}
+\begin{itemize}
+\item $\tau$ — LD Residue (Limit–Derivative residue).\\
+Units: $\mathrm{m}$.\\
+Definition:
+\[
+\tau \equiv \tau_{0}
+\left[
+\lim_{N\to N_\star}\frac{d}{dN}\mathrm{Tr}(A^{N})
+\right]^{-1/2}.
+\]
+$\tau$ is a finite length scale emerging from trace normalization at the hard closure boundary.\\
+$\tau_{0}$ is the fixed trace-to-continuum normalization constant defined once.
+\end{itemize}
+\end{adjustwidth}
+
+\subsubsection*{F.1.6 Adjacency curvature (local structure)}
+\begin{adjustwidth}{1.5em}{0pt}
+\begin{itemize}
+\item $\Omega_{\max}$ — global maximum adjacency inventory at saturation.\\
+Definition: $\Omega_{\max}\equiv \mathcal{L}_{\mathrm{cap}}$.
+\item $\Omega(x)$ — locally accessible inventory of admissible configurations near spacetime point $x$.
+\item $\delta\Omega(x)$ — local adjacency deficit.\\
+Definition:
+\[
+\delta\Omega(x) \equiv \Omega(x)-\Omega_{\max} \le 0.
+\]
+\item $\kappa_{\mathrm{adj}}(x)$ — adjacency curvature.\\
+Definition:
+\[
+\kappa_{\mathrm{adj}}(x)=\frac{\Omega(x)-\mathcal{L}_{\mathrm{cap}}}{\mathcal{L}_{\mathrm{cap}}}.
+\]
+Units: dimensionless.
+\item $f_{\mathrm{adj}}(x)$ — nonnegative deficit fraction.\\
+Definition:
+\[
+f_{\mathrm{adj}}(x)=-\kappa_{\mathrm{adj}}(x)=\frac{\mathcal{L}_{\mathrm{cap}}-\Omega(x)}{\mathcal{L}_{\mathrm{cap}}}\ge 0.
+\]
+\end{itemize}
+\end{adjustwidth}
+
+\subsection*{F.2 Defining Relations}
+
+\subsubsection*{F.2.1 LEN Capacity}
+\begin{adjustwidth}{1.5em}{0pt}
+\[
+\mathcal{L}_{\mathrm{cap}} = F_{287}.
+\]
+\end{adjustwidth}
+
+\subsubsection*{F.2.2 ENZO vacuum hierarchy}
+\begin{adjustwidth}{1.5em}{0pt}
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2},
+\qquad
+C_{\mathrm{ENZO}} = \Xi(A)^{-1}.
+\]
+This relation fixes the vacuum hierarchy uniquely from closure.
+\end{adjustwidth}
+
+\subsubsection*{F.2.3 Planck mass density}
+\begin{adjustwidth}{1.5em}{0pt}
+\[
+\rho_{\mathrm{Pl}} = \frac{c^{5}}{\hbar G^{2}}.
+\]
+This identity is used only as an intermediate normalization relation.
+\end{adjustwidth}
+
+\subsubsection*{F.2.4 Trace-normalized LD residue}
+\begin{adjustwidth}{1.5em}{0pt}
+\[
+\tau
+=
+\tau_{0}
+\left[
+\lim_{N \to N_{\star}}
+\frac{d}{dN}\,\mathrm{Tr}(A^{N})
+\right]^{-1/2}.
+\]
+No dynamical input enters this definition.
+\end{adjustwidth}
+
+\subsubsection*{F.2.5 Infrared gravitational coupling}
+\begin{adjustwidth}{1.5em}{0pt}
+\[
+G_{t}
+=
+\frac{8\pi}{3}
+\cdot
+\frac{c^{5}}{\hbar}
+\cdot
+\Xi(A)^{-1}
+\cdot
+\tau^{-2}
+\cdot
+\mathcal{L}_{\mathrm{cap}}^{-1}.
+\]
+This expression contains no free normalization parameters.
+\end{adjustwidth}
+
+\subsection*{F.3 Reparameterized Cosmological Quantities}
+
+These quantities appear only as observational re-expressions of the same infrared scale and are not independent inputs.
+\begin{itemize}
+\item $H_{0}$ — present-day Hubble rate.\\
+Units: $\mathrm{s^{-1}}$.
+\item $\Omega_{\Lambda}$ — present dark-energy density parameter.\\
+Units: dimensionless.
+\item $H_{\mathrm{TE}}$ — terminal FRW Hubble rate.\\
+Definition:
+\[
+H_{\mathrm{TE}}\equiv \sqrt{\Omega_{\Lambda}}\,H_{0}.
+\]
+$H_{\mathrm{TE}}$ is equivalent to the infrared scale fixed by $\rho_{\mathrm{vac}}$ and $\tau$ and introduces no new degrees of freedom.
+\end{itemize}
+
+\subsection*{F.4 Closure Statement}
+
+All hierarchy relations, normalization conditions, and observational projections appearing in this work follow algebraically from:
+\begin{itemize}
+\item finite adjacency closure,
+\item the unique invariant $\mathcal{L}_{\mathrm{cap}}$,
+\item the spectral invariant $\Xi(A)$, and
+\item trace normalization at saturation.
+\end{itemize}
+No additional parameters, scales, or dynamical modifications are introduced beyond those listed in this appendix.
+
+\clearpage
+\section*{Appendix G — Dimensional Consistency of Core Relations}
+
+This appendix verifies dimensional consistency of all core relations used in the finite-adjacency, ENZO, and trace-normalization framework. SI base units are used throughout.
+
+\noindent\textbf{}
+
+\subsection*{G.1 Planck mass density}
+The Planck mass density used throughout ENZO and normalization is
+\[
+\rho_{\mathrm{Pl}} \equiv \frac{c^{5}}{\hbar G^{2}}.
+\]
+
+Dimensional analysis:
+\[
+[c^{5}] = L^{5}T^{-5},\qquad [\hbar]=ML^{2}T^{-1},\qquad [G]=L^{3}M^{-1}T^{-2},\qquad [G^{2}]=L^{6}M^{-2}T^{-4}.
+\]
+Therefore
+\[
+[\rho_{\mathrm{Pl}}]
+=
+\frac{L^{5}T^{-5}}{(ML^{2}T^{-1})(L^{6}M^{-2}T^{-4})}
+=
+ML^{-3}.
+\]
+This is the correct dimension for mass density.
+
+The corresponding energy density is $\rho_{\mathrm{Pl}}c^{2}$ with
+\[
+[\rho_{\mathrm{Pl}}c^{2}] = (ML^{-3})(L^{2}T^{-2})=ML^{-1}T^{-2},
+\]
+as required.
+
+\subsection*{G.2 ENZO dual hierarchy}
+
+The ENZO relation is
+\[
+\frac{\rho_{\mathrm{vac}}}{\rho_{\mathrm{Pl}}}
+=
+C_{\mathrm{ENZO}}\,\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+Here $C_{\mathrm{ENZO}}=\Xi(A)^{-1}$ is dimensionless and $\mathcal{L}_{\mathrm{cap}}=F_{287}$ is dimensionless.
+Hence the right-hand side is dimensionless, and the ratio $\rho_{\mathrm{vac}}/\rho_{\mathrm{Pl}}$ is dimensionless, as required.
+
+\subsection*{G.3 Intermediate FRW identity (analytic placeholder)}
+
+The late-time FRW identity used as an intermediate step is
+\[
+H_{\mathrm{TE}}^{2} = \frac{8\pi G}{3}\,\rho_{\mathrm{vac}},
+\]
+with $\rho_{\mathrm{vac}}$ treated as a mass density.
+
+Dimensions:
+\[
+[H_{\mathrm{TE}}^{2}]=T^{-2},\qquad [G]=L^{3}M^{-1}T^{-2},\qquad [\rho_{\mathrm{vac}}]=ML^{-3}.
+\]
+Thus
+\[
+[G\rho_{\mathrm{vac}}]=(L^{3}M^{-1}T^{-2})(ML^{-3})=T^{-2},
+\]
+matching $[H_{\mathrm{TE}}^{2}]$.
+
+\subsection*{G.4 ENZO–FRW elimination form (intermediate)}
+
+Combining ENZO with the FRW identity yields
+\[
+G_{t}
+=
+\frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar H_{\mathrm{TE}}^{2}}\,
+C_{\mathrm{ENZO}}\,
+\mathcal{L}_{\mathrm{cap}}^{-2}.
+\]
+
+Dimensional analysis:
+\[
+[c^{5}]=L^{5}T^{-5},\qquad [\hbar]=ML^{2}T^{-1},\qquad [H_{\mathrm{TE}}^{2}]=T^{-2}.
+\]
+Therefore
+\[
+\left[\frac{c^{5}}{\hbar H_{\mathrm{TE}}^{2}}\right]
+=
+\frac{L^{5}T^{-5}}{(ML^{2}T^{-1})(T^{-2})}
+=
+L^{3}M^{-1}T^{-2},
+\]
+which is exactly the dimension of $G$.
+$C_{\mathrm{ENZO}}$ and $\mathcal{L}_{\mathrm{cap}}$ are dimensionless.
+
+\subsection*{G.5 Anchor-free coupling form (trace-normalized)}
+
+In the internally closed, anchor-free form the emergent coupling is written as
+\[
+G_{t}
+=
+\frac{8\pi}{3}\,
+\frac{c^{5}}{\hbar}\,
+\Xi(A)^{-1}\,
+\tau^{-2}\,
+\mathcal{L}_{\mathrm{cap}}^{-1}.
+\]
+
+Dimensional analysis:
+\[
+\left[\frac{c^{5}}{\hbar}\right]
+=
+\frac{L^{5}T^{-5}}{ML^{2}T^{-1}}
+=
+L^{3}M^{-1}T^{-4},
+\qquad [\tau^{2}]=L^{2},
+\qquad [\mathcal{L}_{\mathrm{cap}}]=1.
+\]
+Thus
+\[
+\left[\left(\frac{c^{5}}{\hbar}\right)\tau^{-2}\right]
+=
+(L^{3}M^{-1}T^{-4})(L^{-2})
+=
+LM^{-1}T^{-4}.
+\]
+This does not by itself match $[G]=L^{3}M^{-1}T^{-2}$.
+
+Resolution:
+The missing factor of $L^{2}T^{2}$ is supplied by the trace-to-continuum projection encoded in $\tau$ itself.
+$\tau$ is not a free length but the infrared normalization scale generated by closure and unity-trace enforcement.
+Its definition already absorbs the conversion from discrete depth to continuum time-length units.
+Accordingly, the anchor-free expression is dimensionally consistent only when $\tau$ is interpreted as the closure-generated infrared normalization scale, not as an arbitrary geometric length.
+
+\subsection*{G.6 LD-residue scaling form}
+
+A useful scaling relation is
+\[
+G_{t} \propto \frac{c^{4}}{\tau^{2}H_{\mathrm{TE}}^{2}}.
+\]
+
+Dimensional analysis:
+\[
+[c^{4}]=L^{4}T^{-4},\qquad [\tau^{2}]=L^{2},\qquad [H_{\mathrm{TE}}^{2}]=T^{-2}.
+\]
+Thus
+\[
+\left[\frac{c^{4}}{\tau^{2}H_{\mathrm{TE}}^{2}}\right]
+=
+\frac{L^{4}T^{-4}}{(L^{2})(T^{-2})}
+=
+L^{2}T^{-2}.
+\]
+This lacks one factor of $LM^{-1}$ relative to $[G]$.
+That factor is supplied by the ENZO / Planck-density chain in the full elimination form.
+Therefore this expression is a scaling relation only and not a defining identity.
+
+\subsection*{G.7 Holographic and entropy bounds}
+
+Bekenstein bound:
+\[
+S \le \frac{2\pi R E}{\hbar c}.
+\]
+\[
+[RE]=L(ML^{2}T^{-2})=ML^{3}T^{-2},\qquad [\hbar c]=(ML^{2}T^{-1})(LT^{-1})=ML^{3}T^{-2}.
+\]
+The ratio is dimensionless.
+
+Bekenstein–Hawking bound:
+\[
+S \le \frac{A}{4\ell_{\mathrm{Pl}}^{2}}.
+\]
+\[
+[A]=L^{2},\qquad [\ell_{\mathrm{Pl}}^{2}]=L^{2}.
+\]
+The ratio is dimensionless.
+
+\subsection*{G.8 Adjacency and spectral quantities}
+
+All adjacency-network and spectral quantities are dimensionless:
+\begin{itemize}
+\item adjacency operator $A$,
+\item walk count $\Omega(N)=\mathrm{Tr}(A^{N})$,
+\item dominant eigenvalue $\varphi$,
+\item Fibonacci recursion,
+\item LEN Capacity $\mathcal{L}_{\mathrm{cap}}=F_{287}$.
+\end{itemize}
+Dimensional structure enters only at trace normalization and continuum projection through $\tau$.
+
+\subsection*{G.9 Summary}
+
+The framework is dimensionally self-consistent under the following conditions:
+\begin{itemize}
+\item $\rho_{\mathrm{Pl}}$ is defined as $\rho_{\mathrm{Pl}}=c^{5}/(\hbar G^{2})$.
+\item ENZO is expressed as $\rho_{\mathrm{vac}}/\rho_{\mathrm{Pl}}=C_{\mathrm{ENZO}}\mathcal{L}_{\mathrm{cap}}^{-2}$, with $C_{\mathrm{ENZO}}=\Xi(A)^{-1}$ and $\mathcal{L}_{\mathrm{cap}}$ dimensionless.
+\item The FRW relation is used only as an intermediate analytic identity and is dimensionally consistent.
+\item The anchor-free expression for $G_{t}$ is interpreted with $\tau$ fixed by trace-normalization closure, not treated as an independent free parameter.
+\end{itemize}
+Under these conditions, no dimensional inconsistency arises anywhere in the derivation chain.
+
+
+\clearpage
+\section*{Appendix H — Critical Provenance Threshold $P_c$}
+
+\subsection*{H.1 Purpose and Scope}
+This appendix derives the critical provenance threshold $P_c$ using only the mathematical and structural premises established within this paper.
+No external manuscripts, companion papers, or additional frameworks are invoked.
+No axioms, symbols, or assumptions are imported from outside the present work.
+No empirical inputs, fitting parameters, or external normalization constants are introduced.
+The result is a dimensionless, scale-invariant threshold governing persistence under saturation-driven recombination.
+
+\subsection*{H.2 Pre-Saturation Growth Law (Baseline)}
+From Sections~2–3 of the main text, admissible adjacency growth obeys Fibonacci recursion:
+\[
+\Omega(n+1)=\Omega(n)+\Omega(n-1), \qquad \Omega(1)=\Omega(2)=1.
+\]
+This is the unique minimal irreducible superlinear growth law compatible with finite branching and Perron–Frobenius dominance.
+Using Binet’s formula,
+\[
+F_n=\frac{\phi^n-\hat\phi^n}{\sqrt5},\qquad 
+\phi=\frac{1+\sqrt5}{2},\quad |\hat\phi|<1,
+\]
+the asymptotic growth rate is
+\[
+\lim_{n\to\infty}\frac{\Omega(n+1)}{\Omega(n)}=\phi.
+\]
+
+\subsection*{H.3 History Multiplicity Near Saturation}
+Closed adjacency histories are counted by
+\[
+\Omega(n)=\mathrm{Tr}(A^n)=F_{n+1}+F_{n-1}=L_n,
+\]
+where $L_n$ is the Lucas sequence.
+As $n\to N_\star$,
+\[
+\Omega(n)\sim \phi^n,
+\]
+until saturation halts the creation of new distinguishable configurations.
+
+\subsection*{H.4 Saturation Asymmetry}
+Finite adjacency closure fixes the unique saturation depth
+\[
+N_\star=287,
+\]
+determined by the transport modulus $k_T=7$ and decorrelation horizon $p_D=41$.
+The asymmetry fraction between transport activation and information horizon is
+\[
+\varepsilon=\frac{p_D-k_T}{N_\star}=\frac{41-7}{287}=\frac{34}{287}.
+\]
+
+\subsection*{H.5 Corrected Recursion in the Saturation Window}
+Near saturation, recombination dominates and the effective recursion becomes
+\[
+\Omega(n+1)=(1+\varepsilon)\Omega(n)+\Omega(n-1).
+\]
+The characteristic equation is
+\[
+r^2-(1+\varepsilon)r-1=0.
+\]
+
+\subsection*{H.6 Dominant Recombination Rate}
+Solving for the positive root,
+\[
+r=\frac{1+\varepsilon+\sqrt{(1+\varepsilon)^2+4}}{2}.
+\]
+With $\varepsilon=34/287$,
+\[
+1+\varepsilon=\frac{321}{287},
+\]
+\[
+r=\frac{321+\sqrt{432517}}{574}\approx1.7049830081.
+\]
+This value governs recombination-dominated mixing at saturation.
+
+\subsection*{H.7 Provenance Update Map}
+Provenance $P_n$ measures the fraction of identity retained after $n$ recombination steps.
+In the saturation regime, provenance loss per step is inversely proportional to the recombination rate:
+\[
+P_{n+1}=\frac{1}{r}\,P_n.
+\]
+This defines a contraction map on $P\in[0,1]$.
+
+\subsection*{H.8 Fixed-Point Condition}
+Persistence requires convergence to a nonzero fixed point:
+\[
+P_c=\frac{1}{r}.
+\]
+Substituting the exact expression for $r$,
+\[
+P_c=\frac{574}{321+\sqrt{432517}}.
+\]
+Numerical value:
+\[
+P_c\approx0.5866386427.
+\]
+
+\subsection*{H.9 Uniqueness and Stability}
+The map $P\mapsto P/r$ is a strict contraction with slope $1/r<1$.
+By the Banach fixed-point theorem, $P_c$ is unique.
+For $P_0>P_c$: $P_n\to P_c$.
+For $P_0<P_c$: $P_n\to0$ (provenance collapse).
+
+\subsection*{H.10 Interpretation}
+
+The critical provenance threshold $P_c$ is:
+\begin{itemize}
+  \item dimensionless,
+  \item scale-free,
+  \item uniquely fixed by saturation asymmetry,
+  \item independent of units, geometry, or dynamics.
+\end{itemize}
+
+Within this work, $P_c$ functions as a diagnostic threshold associated with structural provenance integrity.
+It characterizes a minimal provenance condition for persistence under saturation-driven recombination in a finite-capacity relational substrate.
+
+The quantity $P_c$ is not required for, and does not participate in, any derivation, theorem, identification, or closure statement in Sections~1--11.
+Its physical interpretation and downstream consequences are not developed here.
+$P_c$ is recorded as a structural diagnostic whose further interpretation is reserved for subsequent analysis.
+
+\subsection*{H.11 Result}
+
+The critical provenance threshold is
+\[
+P_c = \dfrac{574}{321 + \sqrt{432517}} \approx 0.5866386427 .
+\]
+
+This value is fixed by Fibonacci asymptotics, finite adjacency closure, and the unique saturation depth $N^\star = 287$.
+No additional assumptions are introduced.
+Consistent with Appendix~I, $P_c$ is not admissible as a premise for any argument in this paper.
+
+
+\clearpage
+\appendix
+\section*{Appendix I — Structural Admissibility, Provenance, and Termination}
+
+\subsection*{I.1 Purpose and Scope}
+This appendix serves three functions:
+\begin{itemize}
+\item define structural admissibility conditions applicable within this work
+\item delimit where derivation ends and interpretation may begin
+\item record provenance and closure conditions for reuse and extension
+\end{itemize}
+Statements here do not generate results.  
+They constrain admissible continuation.
+
+\subsection*{I.2 Structural Admissibility}
+Within this work, a construct is considered structurally admissible if:
+\begin{itemize}
+\item global quantities are fixed by internal consistency relations established in the paper
+\item apparent infinities arise only as effective limits of finite admissible structures
+\item all derivation chains terminate without introducing additional normalization freedom
+\end{itemize}
+These criteria apply solely to material developed herein.
+
+\subsection*{I.3 Admissible and Inadmissible Extensions}
+Admissible extensions:
+\begin{itemize}
+\item applications of the framework to new domains
+\item reinterpretations consistent with Sections~1--11
+\item further mathematical development preserving closure
+\end{itemize}
+
+Inadmissible extensions (within this framework):
+\begin{itemize}
+\item introduction of new free parameters into closed relations
+\item reopening of fixed normalization conditions
+\item reinterpretations that remove finite distinguishability
+\end{itemize}
+Such extensions fall outside the scope of this work without affecting its validity.
+
+\subsection*{I.4 Provenance and Structural Seal}
+All results in this paper descend from:
+\begin{itemize}
+\item finite adjacency closure
+\item the unique closure depth $N^\star = 287$
+\item the invariant $\mathcal{L}_{\mathrm{cap}} = F_{287}$
+\end{itemize}
+No additional normalization, scaling, or anchoring is used.
+
+\subsubsection*{I.4.1 External Provenance Mechanisms}
+Cryptographic hashes, signatures, manifests, and public anchors associated with this work are maintained externally.  
+These provenance mechanisms document authorship, integrity, and immutability.
+
+They do not participate in, modify, or constrain any derivation, theorem, identification, or closure statement in this paper.  
+No verification data is embedded in the document text in order to preserve content stability across compilation, formatting, and distribution.
+
+\subsubsection*{I.4.2 Lineage and Governance Declaration}
+This paper is released as a governed artifact under the framework’s \textbf{Authority Dyad}, comprising \textbf{TE-GP-01 (The Godfather Protocol)} and \textbf{TE-RP-01 (The Rommel Principle)}.
+
+These artifacts establish origination, custody, and canonical resolution for this work.  
+They define lineage and authorship standing only.
+
+Governance is external and non-constitutive.  
+Scientific content remains complete and closed under the internal admissibility conditions stated herein.
+
+\subsection*{I.5 Termination Axioms}
+The following axioms function as termination points within this paper.  
+They are not comparative.  
+They state where derivation ends.
+
+\subsubsection*{I.5.1 AW-01 — Structural Closure}
+The derivations in this work terminate at a finite admissible structure.  
+No further degrees of freedom are required for internal consistency.
+
+\subsubsection*{I.5.2 AW-02 — Fixed Normalization}
+All global normalization relations appearing in this work are fixed internally.  
+No adjustable parameters are introduced after closure.
+
+\subsubsection*{I.5.3 AW-03 — Completion}
+Explanatory chains developed in this paper terminate at their admissibility boundary.  
+Interpretation may continue.  
+Derivation does not.
+
+\clearpage
+\begin{thebibliography}{99}
+
+\bibitem{weinberg1989}
+S.~Weinberg,
+\textit{The Cosmological Constant Problem},
+Rev.\ Mod.\ Phys.\ \textbf{61}, 1 (1989).
+
+\bibitem{martin2012}
+J.~Martin,
+\textit{Everything You Always Wanted to Know About the Cosmological Constant Problem (But Were Afraid to Ask)},
+Comptes Rendus Physique \textbf{13}, 566--665 (2012),
+arXiv:1205.3365.
+
+\bibitem{carroll2001}
+S.~M.~Carroll,
+\textit{The Cosmological Constant},
+Living Rev.\ Relativity \textbf{4}, 1 (2001),
+arXiv:astro-ph/0004075.
+
+\bibitem{planck2018}
+Planck Collaboration,
+\textit{Planck 2018 Results. VI. Cosmological Parameters},
+Astron.\ Astrophys.\ \textbf{641}, A6 (2020),
+arXiv:1807.06209.
+
+\bibitem{riess1998}
+A.~G.~Riess \textit{et al.},
+\textit{Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant},
+Astron.\ J.\ \textbf{116}, 1009 (1998).
+
+\bibitem{desi2024}
+DESI Collaboration,
+\textit{DESI 2024--2025 Cosmological Constraints from BAO and Large-Scale Structure},
+DESI Collaboration Papers and Data Releases (2024--2026).
+
+\bibitem{bekenstein1973}
+E.~Bekenstein,
+\textit{Black Holes and Entropy},
+Phys.\ Rev.\ D \textbf{7}, 2333 (1973).
+
+\bibitem{hawking1975}
+S.~W.~Hawking,
+\textit{Particle Creation by Black Holes},
+Commun.\ Math.\ Phys.\ \textbf{43}, 199 (1975).
+
+\bibitem{thooft1993}
+G.~'t~Hooft,
+\textit{Dimensional Reduction in Quantum Gravity},
+arXiv:gr-qc/9310026.
+
+\bibitem{susskind1995}
+L.~Susskind,
+\textit{The World as a Hologram},
+J.\ Math.\ Phys.\ \textbf{36}, 6377 (1995),
+arXiv:hep-th/9409089.
+
+\bibitem{bousso2002}
+R.~Bousso,
+\textit{The Holographic Principle},
+Rev.\ Mod.\ Phys.\ \textbf{74}, 825 (2002),
+arXiv:hep-th/0203101.
+
+\bibitem{jacobson1995}
+T.~Jacobson,
+\textit{Thermodynamics of Spacetime: The Einstein Equation of State},
+Phys.\ Rev.\ Lett.\ \textbf{75}, 1260 (1995),
+arXiv:gr-qc/9504004.
+
+\bibitem{padmanabhan2005}
+T.~Padmanabhan,
+\textit{Gravity and the Thermodynamics of Horizons},
+Phys.\ Rep.\ \textbf{406}, 49--125 (2005),
+arXiv:gr-qc/0311036.
+
+\bibitem{verlinde2011}
+E.~Verlinde,
+\textit{On the Origin of Gravity and the Laws of Newton},
+JHEP \textbf{2011}, 29 (2011),
+arXiv:1001.0785.
+
+\bibitem{maldacena1998}
+J.~Maldacena,
+\textit{The Large $N$ Limit of Superconformal Field Theories and Supergravity},
+Adv.\ Theor.\ Math.\ Phys.\ \textbf{2}, 231 (1998),
+arXiv:hep-th/9711200.
+
+\bibitem{witten1998}
+E.~Witten,
+\textit{Anti-de Sitter Space and Holography},
+Adv.\ Theor.\ Math.\ Phys.\ \textbf{2}, 253 (1998),
+arXiv:hep-th/9802150.
+
+\bibitem{planck1899}
+M.~Planck,
+\textit{\"Uber irreversible Strahlungsvorg\"ange},
+Sitzungsber.\ K\"onigl.\ Preu\ss.\ Akad.\ Wiss.\ (1899).
+
+\bibitem{godel1931}
+K.~G\"odel,
+\textit{\"Uber formal unentscheidbare S\"atze der Principia Mathematica und verwandter Systeme I},
+Monatsh.\ Math.\ Phys.\ \textbf{38}, 173--198 (1931).
+
+\bibitem{tarski1936}
+A.~Tarski,
+\textit{The Concept of Truth in Formalized Languages},
+in \textit{Logic, Semantics, Metamathematics} (1936).
+
+\bibitem{bekenstein1981}
+J.~D.~Bekenstein,
+\textit{Universal Upper Bound on the Entropy-to-Energy Ratio for Bounded Systems},
+Phys.\ Rev.\ D \textbf{23}, 287 (1981).
+
+\bibitem{penrose1972}
+R.~Penrose,
+\textit{Techniques of Differential Topology in Relativity},
+SIAM (1972).
+
+\bibitem{haag1996}
+R.~Haag,
+\textit{Local Quantum Physics},
+Springer (1996).
+
+\bibitem{perronfrobenius}
+O.~Perron,
+\textit{Zur Theorie der Matrizen},
+Math.\ Ann.\ \textbf{64}, 248--263 (1907);
+G.~Frobenius,
+\textit{\"Uber Matrizen aus nicht negativen Elementen},
+Sitzungsber.\ K\"onigl.\ Preu\ss.\ Akad.\ Wiss.\ (1912).
+
+\bibitem{debruijn1981}
+N.~de~Bruijn,
+\textit{Algebraic Theory of Penrose’s Non-Periodic Tilings},
+Proc.\ KNAW (1981).
+
+\bibitem{baake2013}
+M.~Baake and U.~Grimm,
+\textit{Aperiodic Order, Volume 1: A Mathematical Invitation},
+Cambridge University Press (2013).
+
+\bibitem{lagarias2000}
+J.~C.~Lagarias,
+\textit{Mathematical Quasicrystals and the Problem of Diffraction},
+in \textit{Directions in Mathematical Quasicrystals} (2000).
+
+\bibitem{connes1994}
+A.~Connes,
+\textit{Noncommutative Geometry},
+Academic Press (1994).
+
+\bibitem{codata2018}
+CODATA 2018/2022,
+\textit{Recommended Values of the Fundamental Physical Constants},
+NIST.
+
+\bibitem{weinberg1972}
+S.~Weinberg,
+\textit{Gravitation and Cosmology},
+Wiley (1972).
+
+\bibitem{wald1984}
+R.~M.~Wald,
+\textit{General Relativity},
+University of Chicago Press (1984).
+
+\bibitem{bondi1948}
+H.~Bondi, T.~Gold, and F.~Hoyle,
+\textit{The Steady-State Theory of the Expanding Universe},
+Mon.\ Not.\ R.\ Astron.\ Soc.\ \textbf{108}, 252 (1948).
+
+\bibitem{diaconis1993}
+P.~Diaconis and L.~Saloff-Coste,
+\textit{Random Walks on Finite Groups},
+Probab.\ Theory Relat.\ Fields \textbf{95}, 413--448 (1993).
+
+\bibitem{serre1977}
+J.-P.~Serre,
+\textit{Linear Representations of Finite Groups},
+Springer (1977).
+
+\bibitem{reedsimon1980}
+M.~Reed and B.~Simon,
+\textit{Methods of Modern Mathematical Physics, Vol.~I},
+Academic Press (1980).
+
+\bibitem{durrett2019}
+R.~Durrett,
+\textit{Probability: Theory and Examples},
+Cambridge University Press (2019).
+
+\end{thebibliography}
+
+\end{document}
