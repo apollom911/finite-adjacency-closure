@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it as below."
+title: "Matter–Entanglement Link and the Finite Adjacency Closure of Spacetime"
+authors:
+  - family-names: Wong
+    given-names: Rommel Milan
+    orcid: "https://orcid.org/0009-0003-5873-1519"
+doi: "10.5281/zenodo.18580429"
+date-released: "2026-02-04"
+url: "https://zenodo.org/records/18580429"
+type: article
+license: CC-BY-4.0
