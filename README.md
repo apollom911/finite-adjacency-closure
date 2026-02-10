@@ -1,12 +1,29 @@
 # Finite Adjacency Closure
 
+## Cite This Work
+
+Wong, R. M. (2026). Matter–Entanglement Link and the Finite Adjacency Closure of Spacetime (Version V1). Zenodo.
+https://doi.org/10.5281/zenodo.18580429
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18580429.svg)](https://doi.org/10.5281/zenodo.18580429)
+
+---
+
 This repository hosts the canonical release artifacts for:
 
-Matter–Entanglement Link and the Finite Adjacency Closure of Spacetime  
-Author: Rommel Milan Wong  
-Credential ID: TRACE-CRED-ROMMEL-01  
-Signer ID: STEW-ROMMEL-01  
+**Matter–Entanglement Link and the Finite Adjacency Closure of Spacetime**
+Author: Rommel Milan Wong
+ORCID: [0009-0003-5873-1519](https://orcid.org/0009-0003-5873-1519)
+Credential ID: TRACE-CRED-ROMMEL-01
+Signer ID: STEW-ROMMEL-01
 Year: 2026
+
+## Zenodo Records
+
+| Record | Type | DOI |
+|--------|------|-----|
+| [Literature (Preprint)](https://zenodo.org/records/18580429) | Paper | [10.5281/zenodo.18580429](https://doi.org/10.5281/zenodo.18580429) |
+| [Software (Artifact)](https://zenodo.org/records/18511815) | Archive | [10.5281/zenodo.18511815](https://doi.org/10.5281/zenodo.18511815) |
 
 ## Contents
 
@@ -22,7 +39,7 @@ Year: 2026
 - All artifacts are signed by the steward identified as `STEW-ROMMEL-01`
 - Provenance and governance are external and defined by the Authority Dyad:
 
-  • [TE-GP-01 — The Godfather Protocol](https://github.com/apollom911/godfather-protocol)  
+  • [TE-GP-01 — The Godfather Protocol](https://github.com/apollom911/godfather-protocol)
   • [TE-RP-01 — The Rommel Principle](https://github.com/apollom911/godfather-protocol/blob/main/TE-RP-01%20—%20THE%20ROMMEL%20PRINCIPLE.pdf)
 
 This repository contains no derivations, results, interpretations, or governance logic.
